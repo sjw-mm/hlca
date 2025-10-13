@@ -1,0 +1,294 @@
+{
+  "siteName": "美满人生交流协会",
+  "nav": {
+    "home": "首页",
+    "activity": "协会活动",
+    "about": "关于我们",
+    "join": "加入我们",
+    "contact": "联系我们"
+  },
+  "hero": {
+    "title1": "美满人生交流协会",
+    "title2": "连接心灵，拓展生活",
+    "title3": "共建温暖社群",
+    "subtitle1": "共同体验出发，自然相遇的现代社交共同体",
+    "subtitle2": "真诚的交汇是美好生活的基石",
+    "subtitle3": "营造归属感，让每个有心灵交流需求的个体都能在此找到共鸣与支持",
+    "description1": "本协会旨在为海内外朋友们营造一个安全、优质、真诚、多元、向上的交流平台，通过组织丰富多彩的线上及线下活动，帮助会员拓展社交圈层。",
+    "description2": "在快节奏的时代，寻找悠闲从容的方式，协助会员进行真诚、有意义的对话。",
+    "description3": "让每个有心灵交流需求的个体都能在此找到共鸣与支持，共建一个相互尊重、充满温暖的大家庭。",
+    "getStarted": "开始使用"
+  },
+  "profile": {
+    "title": "美满人生交流协会",
+    "subtitle": "共同体验出发，自然相遇的现代社交共同体",
+    "clickHint": "点击了解详情",
+    "ourName": {
+      "title": "我们的名字",
+      "description1": "在快节奏的现代生活中，真挚的相遇愈发珍贵。美满人生交流协会成立于(2025年10月)，是一个汇聚各行业精英、倡导真诚、安全与高效交友的社交平台。",
+      "description2": "我们相信，每一个有趣的灵魂都值得被看见，每一次真诚的连接都能让生活更加温暖。",
+      "description3": "协会致力于打造一个从共同体验出发、自然相遇、彼此启发的现代社交共同体。"
+    },
+    "mission": {
+      "title": "我们的使命与愿景",
+      "description1": "我们希望打破社交壁垒，通过丰富多彩的线上与线下活动，帮助成员拓展人脉、结识志同道合的伙伴、倾诉心声、分享心得，在交流中实现理解与成长。",
+      "description2": "我们的愿景是———成为最受信赖的现代社交平台，让每一位成员都能在这里找到归属感、尊重、快乐与意义。"
+    },
+    "features": {
+      "title": "我们的特色",
+      "safety": {
+        "title": "安全可靠，真诚为本",
+        "description": "实行严格的实名认证制度，确保社群环境真实、安全、值得信赖。"
+      },
+      "etiquette": {
+        "title": "礼仪规范，互敬互信。",
+        "description": "倡导尊重、平等与真诚，对不当行为零容忍，让每一次交流都舒适而有品质。"
+      },
+      "professional": {
+        "title": "专业组织，体验至上。",
+        "description": "每场活动均由专业团队策划，兼顾趣味与深度，让成员轻松融入，享受真诚互动的乐趣。"
+      },
+      "matching": {
+        "title": "精准匹配，缘聚同频。",
+        "description": "结合资深咨询师经验与智能算法，帮助志趣相投的人相识相知，促成自然的心灵共鸣。"
+      },
+      "community": {
+        "title": "社群温度，长久连结。",
+        "description": "不仅是一场活动，更是持续成长的社群。通过微信群及专属APP平台，让友谊延伸、陪伴常在。"
+      }
+    },
+    "values": {
+      "title": "我们的价值观",
+      "sincerity": {
+        "title": "真诚",
+        "description": "——做最真实的自己，建立信任的基础。"
+      },
+      "openness": {
+        "title": "开放",
+        "description": "——以包容的心态拥抱多元与不同。"
+      },
+      "respect": {
+        "title": "尊重",
+        "description": "——让每——一次交流都温和、有界。"
+      },
+      "growth": {
+        "title": "成长",
+        "description": "——在互动中学习，在关系中成就更好的自己。"
+      },
+      "connection": {
+        "title": "连结",
+        "description": "——通过共同体验，让人与人之间更理解、更靠近。"
+      }
+    },
+    "joinUs": {
+      "title": "加入我们",
+      "description1": "加入美满人生交流协会，",
+      "description2": "这是一次走出社交舒适区、展现自我的机会；",
+      "description3": "一个拓展人脉、结识知己的高品质平台；",
+      "description4": "一系列轻松有趣、用心策划的优质活动体验；",
+      "description5": "在这里，你将收获理解、支持与成长的力量，",
+      "description6": "让人生因相遇而更美满。"
+    }
+  },
+  "about": {
+    "title": "协会宗旨与愿景",
+    "subtitle": "连接心灵，拓展生活，共建温暖社群。",
+    "description1": "真诚的交汇是美好生活的基石。本协会旨在为海内外朋友们营造一个安全、优质、真诚、多元、向上的交流平台，通过组织丰富多彩的线上及线下活动，帮助会员拓展社交圈层，突破生活与工作的局限，结识来自不同背景、志趣相投的新朋友。",
+    "description2": "促进深度交流。在快节奏的时代，寻找悠闲从容的方式，协助会员进行真诚、有意义的对话。共享成长乐趣。无论是兴趣爱好、职业发展还是生活感悟，在这里都能找到同好与伙伴，共同学习，一起成长。",
+    "description3": "营造归属感。让每个有心灵交流需求的个体都能在此找到共鸣与支持，共建一个相互尊重、充满温暖的大家庭。",
+    "bottomText": "我们期待，这里不仅是各位相遇的起点，更是长久友谊的沃土。"
+  },
+  "team": {
+    "title": "会长&名誉会长",
+    "coreTeam": "核心团队",
+    "positions": {
+      "president": "会长",
+      "honoraryPresident": "名誉会长",
+      "vicePresident": "副会长",
+      "secretaryGeneral": "秘书长",
+      "director": "理事"
+    },
+    "members": {
+      "ada": {
+        "name": "Ada",
+        "position": "会长",
+        "description": "精通中、英、日三语，拥有德勤 9 年审计、税务（含国际税务）及商业咨询经验，加 10 年加拿大财务与项目咨询管理经验，累计服务超 40 家跨国公司及财富 500 强企业。以全球化财税视野、北美本地资源及跨语言能力，精准对接高净值个人客户需求，定制商业解决方案，获长期信赖；兼具强学习力、问题解决能力、创新策略制定能力与卓越项目管理能力。主导北美新兴项目，2 年助力实现年净利润 3 亿元，业务覆盖加拿大温哥华与美国西雅图；疫情期间落地首个创业项目并获天使投资；新创跨国婚恋社交平台，立项不足 1 月即获首笔天使投资，目标两年内登顶全球市场。爱好心理学、冥想与催眠，熟悉两性关系模型。"
+      },
+      "qianhua": {
+        "name": "钱华",
+        "position": "名誉会长",
+        "description": "钱华女士担任中国文化遗产保护基金会会长，同时也是中国社群女性领袖中的杰出代表。长期以来，她秉持热忱与使命感投身社群服务。多年来，钱女士在团结华侨、弘扬中华文化以及促进中加两国友好关系方面作出了卓越贡献。"
+      },
+      "jeff": {
+        "name": "Jeff",
+        "position": "副会长",
+        "description": "Jeff Tang 拥有多年跨国及本地企业管理与咨询经验，专长于行政管理、市场推广及项目统筹。作为\"美满人生交流协会\"的副会长，Jeff 以真诚、责任与专业为核心，坚持以人为本，致力于搭建真诚交流的平台，促进会员之间的理解、互助与成长。他相信，良好的沟通与协作是连接人与人、实现美满人生的桥梁，并将持续以自己的经验与热忱，为协会的发展与会员的幸福贡献力量。"
+      },
+      "david": {
+        "name": "David",
+        "position": "秘书长",
+        "description": "拥有三十年酒店与服务业管理经验，曾策划并执行多场大型活动，擅长统筹全局与把控细节，以沉稳高效的领导力确保活动顺畅进行。在协会工作中，负责日常运营与活动协调，致力于营造温暖有序的社群环境，推动成员间真诚交流与优质服务的持续提升。"
+      },
+      "gunnar": {
+        "name": "Gunnar",
+        "position": "理事",
+        "description": "作为索尼影视特效公司（Sony Pictures Imageworks）技术总监，拥有25年以上娱乐与视觉特效经验，曾主导《蜘蛛侠：平行宇宙》《花木兰》《奇异博士2：疯狂多元宇宙》等国际知名项目，作品广受业界认可。具备产品、设计与IT全流程管理能力，融合艺术审美与技术实力，精通界面设计、用户体验及复杂系统架构开发。作为协会理事，他积极推动协会在本地的交流与合作，协调会员与外部资源对接，促进跨领域项目落地，助力协会拓展影响力与凝聚力。"
+      },
+      "cathy": {
+        "name": "Cathy",
+        "position": "理事",
+        "description": "毕业于西安财经大学，资深市场营销顾问，具备丰富创意与专业经验，善于沟通与理念引导。曾协助其子在温哥华创办初创企业，从3人发展至200余名员工并成功出售，期间负责团队文化建设、人才招聘、商务谈判及投资者关系管理。作为协会理事，Cathy积极推动品牌建设与活动策划，优化组织架构与公共形象，促进会员交流合作，为协会的持续发展作出重要贡献。"
+      },
+      "joyce": {
+        "name": "范倩茹（Joyce Fan）",
+        "position": "理事",
+        "description": "毕业于广州美术学院，曾在AIA和Manulife等世界500强公司担任市场部经理，策划过广州Terry Fox Run、加拿大文化节、儿童绘画摄影比赛及企业启动大会、年度颁奖典礼等大型活动，拥有丰富活动策划与执行经验。现为画家，加拿大联邦艺术家协会会员。作为协会理事，Joyce积极推动文化艺术活动策划与会员交流，丰富协会项目内容，提升公众参与度与协会影响力。"
+      }
+    }
+  },
+  "activity": {
+    "title": "精彩活动",
+    "activities": {
+      "movieWeek": {
+        "title": "美满人生交流协会成功协办2025年中国电影周，为活动的顺利举办提供了专业支持。",
+        "content": "邀请专业医生为大家讲解常见疾病的预防和保健知识，提高社区居民的健康意识。"
+      },
+      "culturalExchange": {
+        "title": "美满人生交流协会成功协办2025年中国电影周，为活动的顺利举办提供了专业支持。",
+        "content": "展示不同文化的传统艺术和手工艺品，促进社区多元文化交流与理解。"
+      },
+      "anniversary": {
+        "title": "美满生活交流协会作为协办方，参加由中华会馆主办的\"庆祝中华人民共和国成立76周年暨加中建交55周年\"活动",
+        "content": "邀请专业医生为大家讲解常见疾病的预防和保健知识，提高社区居民的健康意识。"
+      },
+      "pressConference": {
+        "title": "协会会长参加2025年中国电影周新闻发布会",
+        "content": "展示不同文化的传统艺术和手工艺品，促进社区多元文化交流与理解。"
+      }
+    }
+  },
+  "news": {
+    "title": "协会新闻"
+  },
+  "contact": {
+    "title": "联系我们",
+    "officeAddress": "办公地址",
+    "phoneNumber": "电话号码",
+    "emailAddress": "邮箱地址",
+    "address": "320 Granville St, Vancouver by BOSA",
+    "email": "Info@mingminglove.com",
+    "qrCode": "二维码",
+    "location": "Canada Vancouver"
+  },
+  "join": {
+    "volunteer": {
+      "title": "志愿者招募",
+      "name": "姓名",
+      "phone": "电话号码",
+      "email": "邮箱地址",
+      "volunteerType": "志愿者类型",
+      "experience": "相关经验",
+      "submit": "提交志愿者申请",
+      "namePlaceholder": "请输入您的姓名",
+      "phonePlaceholder": "请输入电话号码",
+      "emailPlaceholder": "请输入邮箱地址",
+      "volunteerTypePlaceholder": "请选择您想参与的志愿者类型",
+      "experiencePlaceholder": "请描述您在志愿服务方面的相关经验和技能...",
+      "successMessage": "志愿者招募申请提交成功！我们会尽快回复您。",
+      "validation": {
+        "nameRequired": "请输入您的姓名",
+        "phoneRequired": "请输入您的电话",
+        "emailRequired": "请输入您的邮箱",
+        "emailInvalid": "请输入有效的邮箱地址",
+        "volunteerTypeRequired": "请选择志愿者类型",
+        "experienceRequired": "请描述您的相关经验"
+      }
+    },
+    "member": {
+      "title": "成为会员",
+      "name": "姓名",
+      "phone": "电话号码",
+      "email": "邮箱地址",
+      "membershipType": "会员类型",
+      "background": "个人背景",
+      "submit": "提交会员申请",
+      "namePlaceholder": "请输入您的姓名",
+      "phonePlaceholder": "请输入电话号码",
+      "emailPlaceholder": "请输入邮箱地址",
+      "membershipTypePlaceholder": "请选择您想申请的会员类型",
+      "backgroundPlaceholder": "请描述您的职业背景、兴趣爱好和加入协会的原因...",
+      "successMessage": "成为会员申请提交成功！我们会尽快回复您。",
+      "validation": {
+        "nameRequired": "请输入您的姓名",
+        "phoneRequired": "请输入您的电话",
+        "emailRequired": "请输入您的邮箱",
+        "emailInvalid": "请输入有效的邮箱地址",
+        "membershipTypeRequired": "请选择会员类型",
+        "backgroundRequired": "请描述您的个人背景"
+      }
+    },
+    "partner": {
+      "title": "合作机构申请",
+      "organizationName": "机构名称",
+      "contactPerson": "联系人",
+      "phone": "联系电话",
+      "email": "邮箱地址",
+      "cooperationType": "合作类型",
+      "proposal": "合作提案",
+      "submit": "提交合作申请",
+      "organizationNamePlaceholder": "请输入机构名称",
+      "contactPersonPlaceholder": "请输入联系人姓名",
+      "phonePlaceholder": "请输入联系电话",
+      "emailPlaceholder": "请输入邮箱地址",
+      "cooperationTypePlaceholder": "请选择合作类型",
+      "proposalPlaceholder": "请详细描述您的合作提案、机构介绍和合作期望...",
+      "successMessage": "合作机构申请提交成功！我们会尽快回复您。",
+      "validation": {
+        "organizationNameRequired": "请输入机构名称",
+        "contactPersonRequired": "请输入联系人姓名",
+        "phoneRequired": "请输入联系电话",
+        "emailRequired": "请输入邮箱地址",
+        "emailInvalid": "请输入有效的邮箱地址",
+        "cooperationTypeRequired": "请选择合作类型",
+        "proposalRequired": "请描述合作提案"
+      }
+    }
+  },
+  "breadcrumb": {
+    "youAreHere": "您在这里!",
+    "team": "团队"
+  },
+  "footer": {
+    "copyright": "版权所有 © 美满人生交流协会 保留所有权利。"
+  },
+  "video": {
+    "title": "视频中心",
+    "subtitle": "观看我们的精彩视频内容",
+    "featuredVideo": "特色视频",
+    "videos": {
+      "intro": {
+        "title": "协会介绍视频",
+        "description": "了解美满生活交流协会的使命和愿景"
+      },
+      "activities": {
+        "title": "社区活动回顾",
+        "description": "回顾我们精彩的社区活动"
+      },
+      "volunteers": {
+        "title": "志愿者故事",
+        "description": "听听志愿者的感人故事"
+      },
+      "future": {
+        "title": "未来展望",
+        "description": "展望协会的美好未来"
+      },
+      "annualSummary": {
+        "title": "协会年度总结"
+      }
+    }
+  },
+  "common": {
+    "menu": "菜单",
+    "language": "语言"
+  }
+}

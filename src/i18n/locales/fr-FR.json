@@ -1,0 +1,294 @@
+{
+  "siteName": "Association Meet & Mingle",
+  "nav": {
+    "home": "Accueil",
+    "activity": "Activités",
+    "about": "À propos",
+    "join": "Rejoignez-nous",
+    "contact": "Contactez-nous"
+  },
+  "hero": {
+    "title1": "Association Meet & Mingle",
+    "title2": "Connecter les cœurs, élargir la vie",
+    "title3": "Construire ensemble une communauté chaleureuse",
+    "subtitle1": "Une communauté sociale moderne qui commence par des expériences partagées et des rencontres naturelles",
+    "subtitle2": "Les connexions sincères sont le fondement d'une belle vie",
+    "subtitle3": "Créer un sentiment d'appartenance, où chaque individu cherchant une communication spirituelle peut trouver résonance et soutien",
+    "description1": "Notre association vise à créer une plateforme de communication sûre, de haute qualité, sincère, diversifiée et stimulante pour les amis du pays et de l'étranger, aidant les membres à élargir leurs cercles sociaux grâce à l'organisation d'activités en ligne et hors ligne riches et colorées.",
+    "description2": "À cette époque rapide, nous cherchons des moyens détendus et calmes pour aider les membres à mener des dialogues sincères et significatifs.",
+    "description3": "Permettre à chaque individu ayant besoin de communication spirituelle de trouver résonance et soutien ici, construire ensemble une grande famille étendue mutuellement respectueuse et chaleureuse.",
+    "getStarted": "Commencer"
+  },
+  "profile": {
+    "title": "Association Meet & Mingle",
+    "subtitle": "Une communauté sociale moderne qui commence par des expériences partagées et des rencontres naturelles",
+    "clickHint": "Cliquez pour plus de détails",
+    "ourName": {
+      "title": "Notre Nom",
+      "description1": "Dans la vie moderne au rythme rapide, les rencontres authentiques deviennent de plus en plus précieuses. L'Association Meet & Mingle a été fondée en (octobre 2025) comme une plateforme sociale qui rassemble des élites de diverses industries, prônant des connexions sociales sincères, sûres et efficaces.",
+      "description2": "Nous croyons que chaque âme intéressante mérite d'être vue, et chaque connexion sincère peut rendre la vie plus chaleureuse.",
+      "description3": "L'association s'engage à créer une communauté sociale moderne qui commence par des expériences partagées, des rencontres naturelles et une inspiration mutuelle."
+    },
+    "mission": {
+      "title": "Notre Mission et Vision",
+      "description1": "Nous espérons briser les barrières sociales, aidant les membres à élargir leurs réseaux, rencontrer des partenaires partageant les mêmes idées, partager leurs pensées et expériences grâce à des activités en ligne et hors ligne riches et colorées, atteignant la compréhension et la croissance par la communication.",
+      "description2": "Notre vision est de devenir la plateforme sociale moderne la plus fiable, où chaque membre peut trouver un sentiment d'appartenance, de respect, de bonheur et de sens."
+    },
+    "features": {
+      "title": "Nos Caractéristiques",
+      "safety": {
+        "title": "Sûr et Fiable, Sincérité d'Abord",
+        "description": "Nous mettons en place un système strict d'authentification en nom réel pour assurer un environnement communautaire réel, sûr et digne de confiance."
+      },
+      "etiquette": {
+        "title": "Normes d'Étiquette, Respect et Confiance Mutuels",
+        "description": "Nous prônons le respect, l'égalité et la sincérité, avec une tolérance zéro pour les comportements inappropriés, rendant chaque interaction confortable et de qualité."
+      },
+      "professional": {
+        "title": "Organisation Professionnelle, Expérience d'Abord",
+        "description": "Chaque événement est planifié par des équipes professionnelles, équilibrant plaisir et profondeur, permettant aux membres de s'intégrer facilement et de profiter du plaisir de l'interaction sincère."
+      },
+      "matching": {
+        "title": "Correspondance Précise, le Destin Rassemble les Esprits Similaires",
+        "description": "Combinant l'expérience de consultants seniors avec des algorithmes intelligents pour aider les personnes partageant les mêmes idées à se rencontrer et se connaître, créant une résonance spirituelle naturelle."
+      },
+      "community": {
+        "title": "Chaleur Communautaire, Connexions Durables",
+        "description": "Pas seulement un événement, mais une communauté en croissance continue. Grâce aux groupes WeChat et à la plateforme APP dédiée, les amitiés s'étendent et la compagnie est toujours présente."
+      }
+    },
+    "values": {
+      "title": "Nos Valeurs",
+      "sincerity": {
+        "title": "Sincérité",
+        "description": "—Être votre moi le plus authentique, construisant la base de la confiance."
+      },
+      "openness": {
+        "title": "Ouverture",
+        "description": "—Embrasser la diversité et les différences avec un état d'esprit inclusif."
+      },
+      "respect": {
+        "title": "Respect",
+        "description": "—Rendre chaque interaction douce et délimitée."
+      },
+      "growth": {
+        "title": "Croissance",
+        "description": "—Apprendre par l'interaction, atteindre un meilleur soi par les relations."
+      },
+      "connection": {
+        "title": "Connexion",
+        "description": "—Grâce aux expériences partagées, faire en sorte que les gens se comprennent et se rapprochent."
+      }
+    },
+    "joinUs": {
+      "title": "Rejoignez-nous",
+      "description1": "Rejoignez l'Association Meet & Mingle,",
+      "description2": "C'est une opportunité de sortir de votre zone de confort sociale et de vous exprimer;",
+      "description3": "Une plateforme de haute qualité pour élargir votre réseau et rencontrer des âmes sœurs;",
+      "description4": "Une série d'expériences d'activités de qualité détendues, amusantes et soigneusement planifiées;",
+      "description5": "Ici, vous gagnerez le pouvoir de compréhension, de soutien et de croissance,",
+      "description6": "Rendant la vie plus épanouissante grâce aux rencontres."
+    }
+  },
+  "about": {
+    "title": "Mission et Vision de l'Association",
+    "subtitle": "Connecter les cœurs, élargir la vie, construire ensemble une communauté chaleureuse.",
+    "description1": "Les connexions sincères sont le fondement d'une belle vie. Notre association vise à créer une plateforme de communication sûre, de haute qualité, sincère, diversifiée et stimulante pour les amis du pays et de l'étranger, aidant les membres à élargir leurs cercles sociaux, à briser les limitations de la vie et du travail, et à rencontrer de nouveaux amis de différents horizons avec des intérêts similaires.",
+    "description2": "Promouvoir la communication profonde. À cette époque rapide, nous cherchons des moyens détendus et calmes pour aider les membres à mener des dialogues sincères et significatifs. Partager la joie de grandir. Que ce soit les loisirs, le développement de carrière ou les insights de vie, vous pouvez trouver des personnes partageant les mêmes idées et des partenaires ici pour apprendre et grandir ensemble.",
+    "description3": "Créer un sentiment d'appartenance. Permettre à chaque individu ayant besoin de communication spirituelle de trouver résonance et soutien ici, construire ensemble une grande famille étendue mutuellement respectueuse et chaleureuse.",
+    "bottomText": "Nous espérons que ce sera non seulement le point de départ de vos rencontres, mais aussi le terrain fertile pour des amitiés durables."
+  },
+  "team": {
+    "title": "Président et Président d'Honneur",
+    "coreTeam": "Équipe Principale",
+    "positions": {
+      "president": "Président",
+      "honoraryPresident": "Président d'Honneur",
+      "vicePresident": "Vice-Président",
+      "secretaryGeneral": "Secrétaire Général",
+      "director": "Directeur"
+    },
+    "members": {
+      "ada": {
+        "name": "Ada",
+        "position": "Président",
+        "description": "Maîtrise le chinois, l'anglais et le japonais, avec 9 ans d'expérience en audit, fiscalité (y compris la fiscalité internationale) et conseil commercial chez Deloitte, plus 10 ans d'expérience en gestion de conseil financier et de projets au Canada, servant plus de 40 multinationales et entreprises Fortune 500. Avec une vision financière et fiscale mondiale, des ressources locales nord-américaines et des capacités multilingues, elle répond précisément aux besoins des clients particuliers à haut patrimoine, personnalise les solutions commerciales et gagne la confiance à long terme."
+      },
+      "qianhua": {
+        "name": "Qianhua",
+        "position": "Président d'Honneur",
+        "description": "Mme Qianhua est présidente de la Fondation de Protection du Patrimoine Culturel Chinois et est également une représentante exceptionnelle parmi les leaders féminins de la communauté chinoise. Depuis longtemps, elle se consacre au service communautaire avec enthousiasme et un sens de la mission. Au fil des années, Mme Qian a apporté des contributions exceptionnelles à l'union des Chinois d'outre-mer, à la promotion de la culture chinoise et au renforcement des relations amicales entre la Chine et le Canada."
+      },
+      "jeff": {
+        "name": "Jeff",
+        "position": "Vice-Président",
+        "description": "Jeff Tang a de nombreuses années d'expérience en gestion d'entreprises multinationales et locales et en conseil, se spécialisant dans la gestion administrative, le marketing et la coordination de projets. En tant que vice-président de l'Association Meet & Mingle, Jeff se concentre sur la sincérité, la responsabilité et le professionnalisme, adhérant à une approche centrée sur les personnes, et s'engage à construire une plateforme de communication sincère, promouvant la compréhension, l'entraide et la croissance parmi les membres."
+      },
+      "david": {
+        "name": "David",
+        "position": "Secrétaire Général",
+        "description": "Avec trente ans d'expérience en gestion hôtelière et de services, il a planifié et exécuté de nombreux événements à grande échelle, excellant dans la coordination globale et le contrôle des détails, assurant des opérations d'événements fluides avec un leadership stable et efficace. Dans le travail associatif, il est responsable des opérations quotidiennes et de la coordination des événements, s'engageant à créer un environnement communautaire chaleureux et ordonné."
+      },
+      "gunnar": {
+        "name": "Gunnar",
+        "position": "Directeur",
+        "description": "En tant que directeur technique chez Sony Pictures Imageworks, avec plus de 25 ans d'expérience en divertissement et effets visuels, il a dirigé des projets de renommée internationale tels que 'Spider-Man: Into the Spider-Verse', 'Mulan' et 'Doctor Strange in the Multiverse of Madness', avec des œuvres largement reconnues par l'industrie. Il possède des capacités de gestion complètes en produits, design et IT, combinant esthétique artistique et force technique."
+      },
+      "cathy": {
+        "name": "Cathy",
+        "position": "Directeur",
+        "description": "Diplômée de l'Université de Finance et d'Économie de Xi'an, elle est consultante senior en marketing avec une créativité riche et une expérience professionnelle, habile en communication et orientation conceptuelle. Elle a une fois assisté son fils à fonder une startup à Vancouver, passant de 3 à plus de 200 employés et la vendant avec succès, période pendant laquelle elle était responsable de la construction de la culture d'équipe, du recrutement de talents, des négociations commerciales et des relations avec les investisseurs."
+      },
+      "joyce": {
+        "name": "Joyce Fan",
+        "position": "Directeur",
+        "description": "Diplômée de l'Académie des Beaux-Arts de Guangzhou, elle a précédemment servi comme directrice marketing dans des entreprises de renommée mondiale comme AIA et Manulife, planifiant des événements à grande échelle tels que la Course Terry Fox de Guangzhou, le Festival Culturel Canadien, les concours de peinture et photographie pour enfants, et les conférences de lancement d'entreprise et cérémonies de remise de prix annuelles, avec une riche expérience en planification et exécution d'événements. Actuellement peintre et membre de la Fédération Canadienne des Artistes."
+      }
+    }
+  },
+  "activity": {
+    "title": "Activités Passionnantes",
+    "activities": {
+      "movieWeek": {
+        "title": "L'Association Meet & Mingle a co-organisé avec succès la Semaine du Cinéma Chinois 2025, fournissant un soutien professionnel pour le bon déroulement de l'événement.",
+        "content": "A invité des médecins professionnels à expliquer les connaissances de prévention et de santé des maladies courantes, améliorant la sensibilisation à la santé des résidents de la communauté."
+      },
+      "culturalExchange": {
+        "title": "L'Association Meet & Mingle a co-organisé avec succès la Semaine du Cinéma Chinois 2025, fournissant un soutien professionnel pour le bon déroulement de l'événement.",
+        "content": "A présenté des arts traditionnels et de l'artisanat de différentes cultures, promouvant l'échange et la compréhension multiculturels dans la communauté."
+      },
+      "anniversary": {
+        "title": "L'Association Meet & Mingle a participé en tant que co-organisateur à l'événement organisé par le Centre Culturel Chinois célébrant le 76e anniversaire de la fondation de la République Populaire de Chine et le 55e anniversaire des relations diplomatiques Canada-Chine.",
+        "content": "A invité des médecins professionnels à expliquer les connaissances de prévention et de santé des maladies courantes, améliorant la sensibilisation à la santé des résidents de la communauté."
+      },
+      "pressConference": {
+        "title": "Le Président de l'Association a assisté à la conférence de presse de la Semaine du Cinéma Chinois 2025",
+        "content": "A présenté des arts traditionnels et de l'artisanat de différentes cultures, promouvant l'échange et la compréhension multiculturels dans la communauté."
+      }
+    }
+  },
+  "news": {
+    "title": "Actualités de l'Association"
+  },
+  "contact": {
+    "title": "Contactez-nous",
+    "officeAddress": "Adresse du Bureau",
+    "phoneNumber": "Numéro de Téléphone",
+    "emailAddress": "Adresse Email",
+    "address": "320 Granville St, Vancouver by BOSA",
+    "email": "Info@mingminglove.com",
+    "qrCode": "Code QR",
+    "location": "Canada Vancouver"
+  },
+  "join": {
+    "volunteer": {
+      "title": "Recrutement de Bénévoles",
+      "name": "Nom",
+      "phone": "Numéro de Téléphone",
+      "email": "Adresse Email",
+      "volunteerType": "Type de Bénévole",
+      "experience": "Expérience Pertinente",
+      "submit": "Soumettre la Candidature de Bénévole",
+      "namePlaceholder": "Veuillez entrer votre nom",
+      "phonePlaceholder": "Veuillez entrer votre numéro de téléphone",
+      "emailPlaceholder": "Veuillez entrer votre adresse email",
+      "volunteerTypePlaceholder": "Veuillez sélectionner le type de bénévolat auquel vous souhaitez participer",
+      "experiencePlaceholder": "Veuillez décrire votre expérience et compétences pertinentes en bénévolat...",
+      "successMessage": "Candidature de recrutement de bénévole soumise avec succès ! Nous vous répondrons dès que possible.",
+      "validation": {
+        "nameRequired": "Veuillez entrer votre nom",
+        "phoneRequired": "Veuillez entrer votre numéro de téléphone",
+        "emailRequired": "Veuillez entrer votre adresse email",
+        "emailInvalid": "Veuillez entrer une adresse email valide",
+        "volunteerTypeRequired": "Veuillez sélectionner le type de bénévole",
+        "experienceRequired": "Veuillez décrire votre expérience pertinente"
+      }
+    },
+    "member": {
+      "title": "Devenir Membre",
+      "name": "Nom",
+      "phone": "Numéro de Téléphone",
+      "email": "Adresse Email",
+      "membershipType": "Type d'Adhésion",
+      "background": "Contexte Personnel",
+      "submit": "Soumettre la Candidature d'Adhésion",
+      "namePlaceholder": "Veuillez entrer votre nom",
+      "phonePlaceholder": "Veuillez entrer votre numéro de téléphone",
+      "emailPlaceholder": "Veuillez entrer votre adresse email",
+      "membershipTypePlaceholder": "Veuillez sélectionner le type d'adhésion pour lequel vous souhaitez postuler",
+      "backgroundPlaceholder": "Veuillez décrire votre contexte professionnel, vos intérêts et vos raisons de rejoindre l'association...",
+      "successMessage": "Candidature d'adhésion soumise avec succès ! Nous vous répondrons dès que possible.",
+      "validation": {
+        "nameRequired": "Veuillez entrer votre nom",
+        "phoneRequired": "Veuillez entrer votre numéro de téléphone",
+        "emailRequired": "Veuillez entrer votre adresse email",
+        "emailInvalid": "Veuillez entrer une adresse email valide",
+        "membershipTypeRequired": "Veuillez sélectionner le type d'adhésion",
+        "backgroundRequired": "Veuillez décrire votre contexte personnel"
+      }
+    },
+    "partner": {
+      "title": "Candidature d'Organisation Partenaire",
+      "organizationName": "Nom de l'Organisation",
+      "contactPerson": "Personne de Contact",
+      "phone": "Téléphone de Contact",
+      "email": "Adresse Email",
+      "cooperationType": "Type de Coopération",
+      "proposal": "Proposition de Coopération",
+      "submit": "Soumettre la Candidature de Partenariat",
+      "organizationNamePlaceholder": "Veuillez entrer le nom de l'organisation",
+      "contactPersonPlaceholder": "Veuillez entrer le nom de la personne de contact",
+      "phonePlaceholder": "Veuillez entrer le numéro de téléphone de contact",
+      "emailPlaceholder": "Veuillez entrer l'adresse email",
+      "cooperationTypePlaceholder": "Veuillez sélectionner le type de coopération",
+      "proposalPlaceholder": "Veuillez décrire en détail votre proposition de coopération, l'introduction de l'organisation et les attentes de coopération...",
+      "successMessage": "Candidature de partenariat soumise avec succès ! Nous vous répondrons dès que possible.",
+      "validation": {
+        "organizationNameRequired": "Veuillez entrer le nom de l'organisation",
+        "contactPersonRequired": "Veuillez entrer le nom de la personne de contact",
+        "phoneRequired": "Veuillez entrer le numéro de téléphone de contact",
+        "emailRequired": "Veuillez entrer l'adresse email",
+        "emailInvalid": "Veuillez entrer une adresse email valide",
+        "cooperationTypeRequired": "Veuillez sélectionner le type de coopération",
+        "proposalRequired": "Veuillez décrire la proposition de coopération"
+      }
+    }
+  },
+  "breadcrumb": {
+    "youAreHere": "Vous êtes ici !",
+    "team": "Équipe"
+  },
+  "footer": {
+    "copyright": "Droits d'auteur © Association Meet & Mingle. Tous droits réservés."
+  },
+  "video": {
+    "title": "Centre Vidéo",
+    "subtitle": "Regardez notre contenu vidéo incroyable",
+    "featuredVideo": "Vidéo en Vedette",
+    "videos": {
+      "intro": {
+        "title": "Vidéo d'Introduction de l'Association",
+        "description": "Découvrez la mission et la vision de l'Association Meet & Mingle"
+      },
+      "activities": {
+        "title": "Rétrospective des Activités Communautaires",
+        "description": "Revoyez nos merveilleuses activités communautaires"
+      },
+      "volunteers": {
+        "title": "Histoires de Bénévoles",
+        "description": "Écoutez les histoires touchantes des bénévoles"
+      },
+      "future": {
+        "title": "Perspectives d'Avenir",
+        "description": "Regardez vers l'avenir radieux de l'association"
+      },
+      "annualSummary": {
+        "title": "Résumé Annuel de l'Association"
+      }
+    }
+  },
+  "common": {
+    "menu": "Menu",
+    "language": "Langue"
+  }
+}

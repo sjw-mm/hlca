@@ -1,0 +1,189 @@
+/* 视频页面样式 */
+.video-page {
+  background: #f8f9fa;
+  min-height: 100vh;
+  padding: 40px 0;
+}
+
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.page-header h1 {
+  font-size: 36px;
+  color: #17161a;
+  margin-bottom: 16px;
+  font-weight: 700;
+}
+
+.page-header p {
+  font-size: 18px;
+  color: #666;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* 视频卡片 */
+.video-card {
+  height: 100%;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(246, 104, 172, 0.1);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.video-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 32px rgba(246, 104, 172, 0.15);
+}
+
+.video-card .ant-card-body {
+  padding: 20px;
+}
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+}
+
+.video-info {
+  text-align: center;
+}
+
+.video-title {
+  font-size: 18px;
+  color: #17161a;
+  margin-bottom: 12px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.video-description {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* 特色视频区域 */
+.featured-video-section {
+  margin-top: 80px;
+  text-align: center;
+}
+
+.featured-video-section h2 {
+  font-size: 28px;
+  color: #17161a;
+  margin-bottom: 40px;
+  font-weight: 600;
+}
+
+.featured-video-wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(246, 104, 172, 0.2);
+}
+
+.featured-video {
+  width: 100%;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .video-page {
+    padding: 20px 0;
+  }
+  
+  .page-header {
+    margin-bottom: 40px;
+  }
+  
+  .page-header h1 {
+    font-size: 28px;
+  }
+  
+  .page-header p {
+    font-size: 16px;
+  }
+  
+  .video-card .ant-card-body {
+    padding: 16px;
+  }
+  
+  .video-title {
+    font-size: 16px;
+  }
+  
+  .video-description {
+    font-size: 13px;
+  }
+  
+  .featured-video-section {
+    margin-top: 60px;
+  }
+  
+  .featured-video-section h2 {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-header h1 {
+    font-size: 24px;
+  }
+  
+  .page-header p {
+    font-size: 14px;
+  }
+  
+  .video-card .ant-card-body {
+    padding: 12px;
+  }
+  
+  .video-title {
+    font-size: 15px;
+  }
+  
+  .video-description {
+    font-size: 12px;
+  }
+  
+  .featured-video-section h2 {
+    font-size: 20px;
+  }
+}
+
+/* 确保卡片高度一致 */
+.video-card .ant-card-cover {
+  height: 200px;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .video-card .ant-card-cover {
+    height: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  .video-card .ant-card-cover {
+    height: 160px;
+  }
+}
