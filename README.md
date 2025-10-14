@@ -4,7 +4,7 @@
 
 ## 技术栈
 
-- **React 19** - 前端框架
+- **React 18** - 前端框架
 - **TypeScript** - 类型安全
 - **Ant Design 5** - UI组件库
 - **React Router** - 路由管理
@@ -60,16 +60,16 @@ src/
 
 ```bash
 # 安装依赖
-npm install
+pnpm install
 
 # 启动开发服务器
-npm run dev
+pnpm run dev
 
 # 构建生产版本
-npm run build
+pnpm run build   
 
 # 预览构建结果
-npm run preview
+pnpm run preview
 ```
 
 ## 浏览器支持
