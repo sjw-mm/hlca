@@ -2,7 +2,7 @@ import React from 'react';
 import { Button, Carousel } from 'antd';
 import { ArrowRightOutlined } from '@ant-design/icons';
 import { useTranslation } from 'react-i18next';
-import './HeroSection.css';
+import styles from './HeroSection.module.css';
 
 const HeroSection: React.FC = () => {
   const { t } = useTranslation();
@@ -29,31 +29,31 @@ const HeroSection: React.FC = () => {
   ];
 
   return (
-    <section className="hero-section">
+    <section className={styles.heroSection}>
       <Carousel 
         autoplay 
         effect="fade"
         dots={true}
-        className="hero-carousel"
+        className={styles.heroCarousel}
       >
         {heroContent.map((slide, index) => (
-          <div key={index} className="hero-slide">
+          <div key={index} className={styles.heroSlide}>
             <div 
-              className="hero-background"
+              className={styles.heroBackground}
               style={{ backgroundImage: `url(${slide.backgroundImage})` }}
             />
-            <div className="hero-overlay" />
-            <div className="hero-content">
-              <div className="container">
-                <div className="hero-text">
-                  <h1 className="hero-title">{slide.title}</h1>
-                  <h2 className="hero-subtitle">{slide.subtitle}</h2>
-                  <p className="hero-description">{slide.description}</p>
-                  <div className="hero-actions">
+            <div className={styles.heroOverlay} />
+            <div className={styles.heroContent}>
+              <div className={styles.container}>
+                <div className={styles.heroText}>
+                  <h1 className={styles.heroTitle}>{slide.title}</h1>
+                  <h2 className={styles.heroSubtitle}>{slide.subtitle}</h2>
+                  <p className={styles.heroDescription}>{slide.description}</p>
+                  <div className={styles.heroActions}>
                     <Button 
                       type="primary" 
                       size="large"
-                      className="hero-btn"
+                      className={styles.heroBtn}
                     >
                       {t('hero.getStarted')}
                       <ArrowRightOutlined />

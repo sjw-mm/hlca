@@ -1,7 +1,7 @@
 import React from 'react';
 import { Row, Col, Card, Button } from 'antd';
 import { ArrowRightOutlined } from '@ant-design/icons';
-import './ServicesSection.css';
+import styles from './ServicesSection.module.css';
 
 const ServicesSection: React.FC = () => {
   const services = [
@@ -38,9 +38,9 @@ const ServicesSection: React.FC = () => {
   ];
 
   return (
-    <section className="services-section">
-      <div className="container">
-        <div className="section-header">
+    <section className={styles.servicesSection}>
+      <div className={styles.container}>
+        <div className={styles.sectionHeader}>
           <h2>我们的服务</h2>
           <h3>我们为客户提供</h3>
           <h1>商业服务</h1>
@@ -50,20 +50,20 @@ const ServicesSection: React.FC = () => {
           {services.map((service, index) => (
             <Col xs={24} sm={12} lg={8} key={index}>
               <Card 
-                className="service-card"
+                className={styles.serviceCard}
                 hoverable
                 cover={
-                  <div className="service-image">
+                  <div className={styles.serviceImage}>
                     <img src={service.image} alt={service.title} />
                   </div>
                 }
               >
-                <div className="service-content">
-                  <h3 className="service-title">{service.title}</h3>
-                  <p className="service-description">{service.description}</p>
+                <div className={styles.serviceContent}>
+                  <h3 className={styles.serviceTitle}>{service.title}</h3>
+                  <p className={styles.serviceDescription}>{service.description}</p>
                   <Button 
                     type="link" 
-                    className="service-btn"
+                    className={styles.serviceBtn}
                     icon={<ArrowRightOutlined />}
                   >
                     了解更多

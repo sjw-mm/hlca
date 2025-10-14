@@ -2,7 +2,7 @@ import React from 'react';
 import { Row, Col, Card } from 'antd';
 import { useTranslation } from 'react-i18next';
 import VideoPlayer from '../../components/VideoPlayer';
-import './index.css';
+import styles from './index.module.css';
 
 const Video: React.FC = () => {
   const { t } = useTranslation();
@@ -55,9 +55,9 @@ const Video: React.FC = () => {
   };
 
   return (
-    <div className="video-page">
-      <div className="container">
-        <div className="page-header">
+    <div className={styles.videoPage}>
+      <div className={styles.videoContainer}>
+        <div className={styles.videoPageHeader}>
           <h1>{t('video.title')}</h1>
           <p>{t('video.subtitle')}</p>
         </div>
@@ -66,10 +66,10 @@ const Video: React.FC = () => {
           {videoList.map((video) => (
             <Col xs={24} sm={12} lg={8} xl={6} key={video.id}>
               <Card 
-                className="video-card"
+                className={styles.videoCard}
                 hoverable
                 cover={
-                  <div className="video-wrapper">
+                  <div className={styles.videoWrapper}>
                     <VideoPlayer
                       src={video.src}
                       poster={video.poster}
@@ -82,9 +82,9 @@ const Video: React.FC = () => {
                   </div>
                 }
               >
-                <div className="video-info">
-                  <h3 className="video-title">{video.title}</h3>
-                  <p className="video-description">{video.description}</p>
+                <div className={styles.videoInfo}>
+                  <h3 className={styles.videoTitle}>{video.title}</h3>
+                  <p className={styles.videoDescription}>{video.description}</p>
                 </div>
               </Card>
             </Col>
@@ -92,14 +92,14 @@ const Video: React.FC = () => {
         </Row>
 
         {/* 特色视频区域 */}
-        <div className="featured-video-section">
+        <div className={styles.videoFeaturedVideoSection}>
           <h2>{t('video.featuredVideo')}</h2>
-          <div className="featured-video-wrapper">
+          <div className={styles.videoFeaturedVideoWrapper}>
             <VideoPlayer
               src="https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4"
               poster="https://picsum.photos/1300/675?random=featured"
               title={t('video.videos.annualSummary.title')}
-              className="featured-video"
+              className={styles.videoFeaturedVideo}
               autoPlay={false}
               onPlay={() => console.log('特色视频开始播放')}
               onPause={() => console.log('特色视频暂停')}

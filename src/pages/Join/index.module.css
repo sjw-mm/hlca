@@ -1,0 +1,251 @@
+/* Join页面 模块化样式 */
+/* 加入我们页面样式 */
+.joinPage {
+  background: #ffffff;
+  min-height: 100vh;
+  overflow-x: hidden; /* 防止横向滚动 */
+}
+
+/* 主要内容区域 */
+.joinMainContent {
+  background: #ffffff;
+  padding: 40px 0;
+  overflow-x: hidden; /* 防止横向滚动 */
+}
+
+.joinMainContent .joinContainer {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* 表单容器 */
+.joinFormContainer {
+  background: white;
+  border-radius: 12px;
+  padding: 40px;
+  margin: 0 auto;
+  min-width: 300px;
+  max-width: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+
+/* Tab样式 */
+.joinTabs {
+  margin-top: 20px;
+}
+
+.joinTabs .joinAntTabsNav {
+  margin-bottom: 30px;
+}
+
+.joinTabs .joinAntTabsTab {
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 8px 8px 0 0;
+  transition: all 0.3s ease;
+}
+
+.joinTabs .joinAntTabsTab:hover {
+  color: #F668AC;
+}
+
+.joinTabs .joinAntTabsTabActive {
+  color: #F668AC;
+  background: rgba(246, 104, 172, 0.1);
+}
+
+.joinTabs .joinAntTabsTabActive .joinAntTabsTabBtn {
+  color: #F668AC;
+}
+
+.joinTabs .joinAntTabsInkBar {
+  background: #F668AC;
+  height: 3px;
+}
+
+.joinTabs .joinAntTabsTab span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.joinTabs .joinAntTabsTab .joinAnticon {
+  font-size: 18px;
+}
+
+/* 表单样式 */
+.joinForm .joinAntFormItemLabel > label {
+  font-weight: 600;
+  color: #17161a;
+  font-size: 14px;
+}
+
+.joinForm .joinAntInput,
+.joinForm .joinAntInput:focus,
+.joinForm .joinAntInputFocused {
+  border-radius: 8px;
+  border-color: #d9d9d9;
+  box-shadow: none;
+}
+
+.joinForm .joinAntInput:hover,
+.joinForm .joinAntInput:focus {
+  border-color: #F668AC;
+}
+
+.joinForm .joinAntInput:focus,
+.joinForm .joinAntInputFocused {
+  border-color: #F668AC;
+  box-shadow: 0 0 0 2px rgba(246, 104, 172, 0.2);
+}
+
+.joinForm .joinAntInput::placeholder {
+  color: #bfbfbf;
+}
+
+.joinForm .joinAntInputAffixWrapper:hover,
+.joinForm .joinAntInputAffixWrapper:focus {
+  border-color: #F668AC;
+}
+
+.joinForm .joinAntInputAffixWrapper:focus,
+.joinForm .joinAntInputAffixWrapperFocused {
+  border-color: #F668AC;
+  box-shadow: 0 0 0 2px rgba(246, 104, 172, 0.2);
+}
+
+.joinSubmitButton {
+  background: #F668AC;
+  border-color: #F668AC;
+  border-radius: 8px;
+  height: 48px;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.joinSubmitButton:hover {
+  background: #E91E63;
+  border-color: #E91E63;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(246, 104, 172, 0.3);
+}
+
+.joinSubmitButton:focus {
+  background: #E91E63;
+  border-color: #E91E63;
+  box-shadow: 0 0 0 2px rgba(246, 104, 172, 0.2);
+}
+
+/* 响应式设计 */
+@media (min-width: 1400px) {
+  .joinFormContainer {
+    padding: 50px;
+  }
+  
+  .joinPageHeader {
+    padding: 100px 0 80px;
+  }
+  
+  .joinHeaderContent h1 {
+    font-size: 42px;
+  }
+  
+  .joinHeaderContent p {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 1300px) {
+  .joinFormContainer {
+    padding: 36px;
+  }
+}
+
+@media (max-width: 992px) {
+  .joinFormContainer {
+    padding: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .joinPageHeader {
+    padding: 60px 0 40px;
+  }
+  
+  .joinHeaderContent h1 {
+    font-size: 28px;
+  }
+  
+  .joinHeaderContent p {
+    font-size: 16px;
+  }
+  
+  .joinMainContent {
+    padding: 20px 0;
+  }
+  
+  .joinFormContainer {
+    padding: 30px 20px;
+  }
+  
+  .joinTabs .joinAntTabsTab {
+    padding: 10px 16px;
+    font-size: 14px;
+  }
+  
+  .joinTabs .joinAntTabsTab .joinAnticon {
+    font-size: 16px;
+  }
+  
+  .joinSubmitButton {
+    height: 44px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .joinPageHeader {
+    padding: 50px 0 30px;
+  }
+  
+  .joinHeaderContent h1 {
+    font-size: 24px;
+  }
+  
+  .joinHeaderContent p {
+    font-size: 14px;
+  }
+  
+  .joinMainContent {
+    padding: 20px 0;
+  }
+  
+  .joinFormContainer {
+    padding: 24px 16px;
+  }
+  
+  .joinTabs .joinAntTabsTab {
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+  
+  .joinTabs .joinAntTabsTab .joinAnticon {
+    font-size: 14px;
+  }
+  
+  .joinTabs .joinAntTabsTab span {
+    gap: 6px;
+  }
+  
+  .joinSubmitButton {
+    height: 40px;
+    font-size: 14px;
+  }
+}

@@ -9,7 +9,7 @@ import {
   RocketOutlined
 } from '@ant-design/icons';
 import { useTranslation } from 'react-i18next';
-import './FeatureCards.css';
+import styles from './FeatureCards.module.css';
 
 const FeatureCards: React.FC = () => {
   const { t } = useTranslation();
@@ -42,34 +42,34 @@ const FeatureCards: React.FC = () => {
   ];
 
   return (
-    <section className="feature-cards-section">
-      <div className="container">
+    <section className={styles.featureCardsSection}>
+      <div className={styles.container}>
         <Row gutter={[32, 32]}>
           {features.map((feature, index) => (
             <Col xs={24} md={8} key={index}>
-              <div className="feature-card-wrapper">
+              <div className={styles.featureCardWrapper}>
                 <Card 
-                  className="feature-card"
+                  className={styles.featureCard}
                   hoverable
                 >
-                  <div className="feature-front">
-                    <div className="feature-icon">
+                  <div className={styles.featureFront}>
+                    <div className={styles.featureIcon}>
                       {feature.icon}
                     </div>
-                    <h3 className="feature-title">{feature.title}</h3>
-                    <p className="feature-description">{feature.description}</p>
-                    <div className="feature-action">
-                      <a href="#" className="read-more">{t('features.readMore')}</a>
+                    <h3 className={styles.featureTitle}>{feature.title}</h3>
+                    <p className={styles.featureDescription}>{feature.description}</p>
+                    <div className={styles.featureAction}>
+                      <a href="#" className={styles.readMore}>{t('features.readMore')}</a>
                     </div>
                   </div>
-                  <div className="feature-back">
-                    <div className="feature-icon">
+                  <div className={styles.featureBack}>
+                    <div className={styles.featureIcon}>
                       {feature.backIcon}
                     </div>
-                    <h3 className="feature-title">{feature.backTitle}</h3>
-                    <p className="feature-description">{feature.backDescription}</p>
-                    <div className="feature-action">
-                      <a href="#" className="see-more">{t('features.seeMore')}</a>
+                    <h3 className={styles.featureTitle}>{feature.backTitle}</h3>
+                    <p className={styles.featureDescription}>{feature.backDescription}</p>
+                    <div className={styles.featureAction}>
+                      <a href="#" className={styles.seeMore}>{t('features.seeMore')}</a>
                     </div>
                   </div>
                 </Card>

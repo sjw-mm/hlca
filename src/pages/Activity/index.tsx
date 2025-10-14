@@ -1,5 +1,5 @@
 import React from 'react';
-import './index.css';
+import styles from './index.module.css';
 import ActivitySection, { type ActivityProps } from '../Home/components/ActivitySection';
 import activity_1 from '@/assets/image/activity-1.jpeg';
 import activity_2 from '@/assets/image/activity-2.jpeg';
@@ -46,7 +46,7 @@ const Activity: React.FC = () => {
     },
   ];
   return (
-    <div className="activity-page">
+    <div className={styles.activityPage}>
       {/* 活动 */}
       <ActivitySection activityList={activityList} />
     </div>

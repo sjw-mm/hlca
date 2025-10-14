@@ -1,0 +1,560 @@
+/* Contact页面 模块化样式 */
+/* 联系我们页面样式 */
+.contactPage {
+  background: #fff;
+}
+
+.contactContainer {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* 联系信息区域 */
+.contactInfoSection {
+  padding: 80px 0;
+  background: #ffffff;
+}
+
+/* 使用通用container类 */
+
+/* 联系信息卡片居中布局 */
+.contactInfoSection .contactAntRow {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 80px;
+}
+
+.contactInfoSection .contactAntCol {
+  max-width: 400px;
+  flex: 0 0 auto;
+}
+
+/* 确保卡片高度一致 */
+.contactCard .contactAntCardBody {
+  padding: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+}
+
+/* 联系卡片样式 */
+.contactCard {
+  height: 100%;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(246, 104, 172, 0.1);
+  transition: all 0.3s ease;
+  padding: 40px 20px;
+}
+
+.contactCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 32px rgba(246, 104, 172, 0.15);
+}
+
+.contactIcon {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #F668AC, #E91E63);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  color: white;
+  flex-shrink: 0;
+  margin: 0;
+}
+
+.contactCardContent {
+  flex: 1;
+  text-align: left;
+}
+
+.contactCard h3 {
+  font-size: 20px;
+  color: #17161a;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.contactDetails p {
+  margin: 8px 0;
+  color: #666;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* 专门针对地址显示的样式，确保在一行显示 */
+.contactAddress {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 8px 0;
+  color: #666;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.contactDetails a {
+  color: #F668AC;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contactDetails a:hover {
+  color: #E91E63;
+  text-decoration: underline;
+}
+
+/* 微信公众号区域 */
+.contactWechatSection {
+  padding: 80px 0;
+  background: white;
+}
+
+/* 使用通用container类 */
+
+.contactWechatBanner {
+  background: white;
+  padding: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* 左侧二维码区域 */
+.contactQrSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  justify-content: center;
+}
+
+.contactQrCode {
+  width: 200px;
+  height: 200px;
+  padding: 12px;
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.contactQrCodeImg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.contactQrInstruction {
+  color: #666;
+  font-size: 14px;
+  margin: 0;
+  font-weight: 500;
+  text-align: center;
+}
+
+/* 分隔线 */
+.contactDivider {
+  width: 1px;
+  height: 180px;
+  background: #e0e0e0;
+  flex-shrink: 0;
+  margin: 0 30px;
+}
+
+/* 右侧协会信息区域 */
+.contactAssociationSection {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.contactAssociationLogo {
+  text-align: center;
+}
+
+.contactLogoContainer {
+  margin-bottom: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contactLogoImage {
+  max-width: 200px;
+  max-height: 80px;
+  object-fit: contain;
+}
+
+
+.contactChineseName {
+  font-size: 26px;
+  color: #17161a;
+  margin-bottom: 16px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.contactLocation {
+  font-size: 18px;
+  color: #999;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  
+  .contactInfoSection {
+    padding: 60px 0;
+  }
+  
+  /* 移动端卡片居中 */
+  .contactInfoSection .contactAntRow {
+    justify-content: center;
+    gap: 40px;
+  }
+  
+  .contactInfoSection .contactAntCol {
+    max-width: 100%;
+    flex: 0 0 auto;
+  }
+  
+  .contactCard {
+    padding: 30px 20px;
+  }
+  
+  /* 移动端保持上下排列 */
+  .contactCard .contactAntCardBody {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .contactCardContent {
+    text-align: center;
+  }
+  
+  .contactIcon {
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .contactCard h3 {
+    font-size: 18px;
+  }
+  
+  .contactDetails p {
+    font-size: 14px;
+  }
+  
+  .contactWechatSection {
+    padding: 60px 0;
+  }
+  
+  .contactWechatBanner {
+    flex-direction: column;
+    gap: 40px;
+    padding: 40px 20px;
+    max-width: 100%;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .contactDivider {
+    width: 200px;
+    height: 1px;
+    background: #e0e0e0;
+  }
+  
+  .contactLogoImage {
+    max-width: 160px;
+    max-height: 60px;
+  }
+  
+  .contactChineseName {
+    font-size: 20px;
+  }
+  
+  .contactLocation {
+    font-size: 14px;
+  }
+  
+  .contactQrCode {
+    width: 160px;
+    height: 160px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contactBreadcrumbSection h1 {
+    font-size: 28px;
+  }
+  
+  .contactInfoSection {
+    padding: 40px 0;
+  }
+  
+  /* 小屏幕移动端间距 */
+  .contactInfoSection .contactAntRow {
+    gap: 30px;
+  }
+  
+  .contactCard {
+    padding: 24px 16px;
+  }
+  
+  /* 移动端保持上下排列 */
+  .contactCard .contactAntCardBody {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .contactCardContent {
+    text-align: center;
+  }
+  
+  .contactIcon {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    margin-bottom: 16px;
+  }
+  
+  .contactCard h3 {
+    font-size: 16px;
+    margin-bottom: 16px;
+  }
+  
+  .contactDetails p {
+    font-size: 13px;
+  }
+  
+  /* 移动端地址显示 */
+  .contactAddress {
+    font-size: 13px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .contactWechatSection {
+    padding: 40px 0;
+  }
+  
+  .contactWechatBanner {
+    padding: 30px 16px;
+    gap: 30px;
+    max-width: 100%;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .contactLogoImage {
+    max-width: 140px;
+    max-height: 50px;
+  }
+  
+  .contactChineseName {
+    font-size: 18px;
+  }
+  
+  .contactLocation {
+    font-size: 12px;
+  }
+  
+  .contactQrCode {
+    width: 140px;
+    height: 140px;
+  }
+  
+  .contactQrInstruction {
+    font-size: 12px;
+  }
+}
+
+/* 联系表单区域 */
+.contactFormSection {
+  padding: 80px 0;
+  background: #ffffff;
+  /* 表单区域滚动条样式 */
+  scrollbar-width: thin;
+  scrollbar-color: #F668AC rgba(246, 104, 172, 0.1);
+}
+
+.contactFormSection::-webkit-scrollbar {
+  width: 6px;
+}
+
+.contactFormSection::-webkit-scrollbar-track {
+  background: rgba(246, 104, 172, 0.1);
+  border-radius: 3px;
+}
+
+.contactFormSection::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #F668AC, #E91E63);
+  border-radius: 3px;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.contactFormSection::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #E91E63, #C2185B);
+  transform: scaleY(1.1);
+}
+
+.contactFormSection::-webkit-scrollbar-thumb:active {
+  background: linear-gradient(135deg, #C2185B, #AD1457);
+}
+
+/* 使用通用container类 */
+
+.contactFormHeader {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.contactFormHeader h2 {
+  font-size: 32px;
+  color: #17161a;
+  margin-bottom: 16px;
+  font-weight: 700;
+}
+
+.contactFormHeader p {
+  font-size: 16px;
+  color: #666;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.contactFormCard {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(246, 104, 172, 0.1);
+  padding: 40px;
+}
+
+.contactForm .contactAntFormItemLabel > label {
+  font-weight: 600;
+  color: #17161a;
+}
+
+.contactForm .contactAntInput,
+.contactForm .contactAntInput:focus,
+.contactForm .contactAntInputFocused {
+  border-radius: 8px;
+  border-color: #d9d9d9;
+  box-shadow: none;
+}
+
+.contactForm .contactAntInput:hover,
+.contactForm .contactAntInput:focus {
+  border-color: #F668AC;
+}
+
+.contactForm .contactAntInput:focus,
+.contactForm .contactAntInputFocused {
+  border-color: #F668AC;
+  box-shadow: 0 0 0 2px rgba(246, 104, 172, 0.2);
+}
+
+.contactForm .contactAntInput::placeholder {
+  color: #bfbfbf;
+}
+
+.contactSubmitButton {
+  background: #F668AC;
+  border-color: #F668AC;
+  border-radius: 8px;
+  height: 48px;
+  font-size: 16px;
+  font-weight: 600;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.contactSubmitButton:hover {
+  background: #E91E63;
+  border-color: #E91E63;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(246, 104, 172, 0.3);
+}
+
+.contactSubmitButton:focus {
+  background: #E91E63;
+  border-color: #E91E63;
+  box-shadow: 0 0 0 2px rgba(246, 104, 172, 0.2);
+}
+
+/* 表单响应式设计 */
+@media (max-width: 768px) {
+  .contactFormSection {
+    padding: 60px 0;
+  }
+  
+  .contactFormHeader {
+    margin-bottom: 40px;
+  }
+  
+  .contactFormHeader h2 {
+    font-size: 28px;
+  }
+  
+  .contactFormHeader p {
+    font-size: 14px;
+  }
+  
+  .contactFormCard {
+    padding: 30px 20px;
+  }
+  
+  .contactSubmitButton {
+    height: 44px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contactFormSection {
+    padding: 40px 0;
+  }
+  
+  .contactFormHeader h2 {
+    font-size: 24px;
+  }
+  
+  .contactFormHeader p {
+    font-size: 13px;
+  }
+  
+  .contactFormCard {
+    padding: 24px 16px;
+  }
+  
+  .contactSubmitButton {
+    height: 40px;
+    font-size: 14px;
+  }
+}

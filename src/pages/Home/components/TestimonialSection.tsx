@@ -1,7 +1,7 @@
 import React from 'react';
 import { Row, Col, Card, Rate, Avatar } from 'antd';
 import { StarFilled } from '@ant-design/icons';
-import './TestimonialSection.css';
+import styles from './TestimonialSection.module.css';
 
 const TestimonialSection: React.FC = () => {
   const testimonials = [
@@ -24,49 +24,49 @@ const TestimonialSection: React.FC = () => {
   ];
 
   return (
-    <section className="testimonial-section">
-      <div className="container">
-        <div className="section-header">
+    <section className={styles.testimonialSection}>
+      <div className={styles.container}>
+        <div className={styles.sectionHeader}>
           <h2>客户评价</h2>
           <h3>我们满意客户怎么说</h3>
         </div>
         
         <Row gutter={[48, 48]} align="middle">
           <Col xs={24} lg={12}>
-            <div className="testimonial-image">
+            <div className={styles.testimonialImage}>
               <img src={testimonials[0].image} alt="客户评价" />
             </div>
           </Col>
           
           <Col xs={24} lg={12}>
-            <div className="testimonials-content">
+            <div className={styles.testimonialsContent}>
               {testimonials.map((testimonial, index) => (
-                <Card key={index} className="testimonial-card">
-                  <div className="testimonial-content">
-                    <div className="testimonial-avatar">
+                <Card key={index} className={styles.testimonialCard}>
+                  <div className={styles.testimonialContent}>
+                    <div className={styles.testimonialAvatar}>
                       <Avatar 
                         size={60} 
                         src={testimonial.avatar}
-                        className="avatar"
+                        className={styles.avatar}
                       />
                     </div>
                     
-                    <div className="testimonial-info">
-                      <h4 className="testimonial-name">
-                        {testimonial.name} <span className="position">{testimonial.position}</span>
+                    <div className={styles.testimonialInfo}>
+                      <h4 className={styles.testimonialName}>
+                        {testimonial.name} <span className={styles.position}>{testimonial.position}</span>
                       </h4>
                       
-                      <div className="testimonial-rating">
+                      <div className={styles.testimonialRating}>
                         <Rate 
                           disabled 
                           value={testimonial.rating} 
                           character={<StarFilled />}
-                          className="rating-stars"
+                          className={styles.ratingStars}
                         />
-                        <span className="rating-text">优秀!!</span>
+                        <span className={styles.ratingText}>优秀!!</span>
                       </div>
                       
-                      <p className="testimonial-text">{testimonial.content}</p>
+                      <p className={styles.testimonialText}>{testimonial.content}</p>
                     </div>
                   </div>
                 </Card>

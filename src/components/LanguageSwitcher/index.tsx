@@ -2,7 +2,7 @@ import React from 'react';
 import { Dropdown, Button } from 'antd';
 import { GlobalOutlined } from '@ant-design/icons';
 import { useTranslation } from 'react-i18next';
-import './index.css';
+import styles from './index.module.css';
 
 const LanguageSwitcher: React.FC = () => {
   const { i18n } = useTranslation();
@@ -15,8 +15,8 @@ const LanguageSwitcher: React.FC = () => {
     {
       key: 'zh-CN',
       label: (
-        <div className="language-option">
-          <span className="flag">🇨🇳</span>
+        <div className={styles.languageOption}>
+          <span className={styles.flag}>🇨🇳</span>
           <span>中文</span>
         </div>
       ),
@@ -24,8 +24,8 @@ const LanguageSwitcher: React.FC = () => {
     {
       key: 'en-US',
       label: (
-        <div className="language-option">
-          <span className="flag">🇨🇦</span>
+        <div className={styles.languageOption}>
+          <span className={styles.flag}>🇨🇦</span>
           <span>English</span>
         </div>
       ),
@@ -33,8 +33,8 @@ const LanguageSwitcher: React.FC = () => {
     {
       key: 'fr-FR',
       label: (
-        <div className="language-option">
-          <span className="flag">🇫🇷</span>
+        <div className={styles.languageOption}>
+          <span className={styles.flag}>🇫🇷</span>
           <span>Français</span>
         </div>
       ),
@@ -66,7 +66,7 @@ const LanguageSwitcher: React.FC = () => {
       <Button 
         type="text" 
         icon={<GlobalOutlined />}
-        className="language-switcher"
+        className={styles.languageSwitcher}
       >
         {getCurrentLanguage()}
       </Button>

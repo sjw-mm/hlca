@@ -1,0 +1,7 @@
+/* Activity页面 模块化样式 */
+.activityPage {
+  background: #ffffff;
+  min-height: 100vh;
+  overflow-x: hidden;
+  width: 100%;
+}

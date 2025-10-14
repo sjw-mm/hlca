@@ -1,0 +1,193 @@
+/* FeatureCards 模块化样式 */
+/* 特色卡片样式 */
+.featureCardsSection {
+  padding: 80px 0;
+  background: #ffffff;
+}
+
+.featureCardWrapper {
+  height: 100%;
+  perspective: 1000px;
+}
+
+.featureCard {
+  height: 300px;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(246, 104, 172, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  transform-style: preserve-3d;
+  cursor: pointer;
+}
+
+.featureCard:hover {
+  transform: rotateY(180deg);
+  box-shadow: 0 16px 48px rgba(246, 104, 172, 0.15);
+}
+
+.featureFront,
+.featureBack {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  padding: 40px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 12px;
+}
+
+.featureFront {
+  background: linear-gradient(135deg, #fff 0%, #ffffff 100%);
+}
+
+.featureBack {
+  background: linear-gradient(135deg, #F668AC 0%, #d4b547 100%);
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.featureIcon {
+  font-size: 48px;
+  color: #F668AC;
+  margin-bottom: 24px;
+  transition: all 0.3s ease;
+}
+
+.featureBack .featureIcon {
+  color: white;
+}
+
+.featureTitle {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: #17161a;
+  line-height: 1.3;
+}
+
+.featureBack .featureTitle {
+  color: white;
+}
+
+.featureDescription {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #666;
+  margin-bottom: 24px;
+  flex: 1;
+}
+
+.featureBack .featureDescription {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.featureAction {
+  margin-top: auto;
+}
+
+.readMore,
+.seeMore {
+  color: #F668AC;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.readMore:hover,
+.seeMore:hover {
+  color: #d4b547;
+  text-decoration: none;
+}
+
+.seeMore {
+  color: white;
+}
+
+.seeMore:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.readMore::after,
+.seeMore::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #F668AC;
+  transition: width 0.3s ease;
+}
+
+.seeMore::after {
+  background: white;
+}
+
+.readMore:hover::after,
+.seeMore:hover::after {
+  width: 100%;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .featureCardsSection {
+    padding: 60px 0;
+  }
+  
+  .featureCard {
+    height: 280px;
+  }
+  
+  .featureFront,
+  .featureBack {
+    padding: 30px 20px;
+  }
+  
+  .featureIcon {
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
+  
+  .featureTitle {
+    font-size: 20px;
+    margin-bottom: 12px;
+  }
+  
+  .featureDescription {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .featureCard {
+    height: 260px;
+  }
+  
+  .featureFront,
+  .featureBack {
+    padding: 25px 15px;
+  }
+  
+  .featureIcon {
+    font-size: 36px;
+    margin-bottom: 16px;
+  }
+  
+  .featureTitle {
+    font-size: 18px;
+  }
+  
+  .featureDescription {
+    font-size: 13px;
+  }
+}

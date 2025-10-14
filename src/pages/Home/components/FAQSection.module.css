@@ -1,0 +1,215 @@
+/* FAQSection 模块化样式 */
+/* FAQ和联系表单区域样式 */
+.faqSection {
+  padding: 80px 0;
+  background: #ffffff;
+}
+
+.contactForm {
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(246, 104, 172, 0.1);
+}
+
+.formHeader h1 {
+  font-size: 32px;
+  color: #17161a;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.formHeader h2 {
+  font-size: 20px;
+  color: #666;
+  margin-bottom: 32px;
+  font-weight: 500;
+}
+
+.contactFormContent .antFormItem {
+  margin-bottom: 24px;
+}
+
+.contactFormContent .antInput,
+.contactFormContent .antInputAffixWrapper {
+  border-radius: 8px;
+  border: 2px solid #e8e8e8;
+  transition: all 0.3s ease;
+}
+
+.contactFormContent .antInput:focus,
+.contactFormContent .antInputAffixWrapper:focus,
+.contactFormContent .antInputAffixWrapperFocused {
+  border-color: #F668AC;
+  box-shadow: 0 0 0 2px rgba(246, 104, 172, 0.2);
+}
+
+.contactFormContent .antInputAffixWrapper .antInput {
+  border: none;
+  box-shadow: none;
+}
+
+.contactFormContent .antInputAffixWrapper .antInput:focus {
+  border: none;
+  box-shadow: none;
+}
+
+.submitBtn {
+  height: 48px;
+  padding: 0 32px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  background: #F668AC;
+  border-color: #F668AC;
+  transition: all 0.3s ease;
+}
+
+.submitBtn:hover {
+  background: #d4b547;
+  border-color: #d4b547;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(246, 104, 172, 0.3);
+}
+
+.faqContent {
+  padding: 20px 0;
+}
+
+.faqHeader h2 {
+  font-size: 28px;
+  color: #17161a;
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+
+.faqHeader h3 {
+  font-size: 20px;
+  color: #666;
+  margin-bottom: 16px;
+  font-weight: 500;
+}
+
+.faqHeader p {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 32px;
+}
+
+.faqAccordion {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(246, 104, 172, 0.1);
+  border: none;
+}
+
+.faqAccordion .antCollapseItem {
+  border: none;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.faqAccordion .antCollapseItem:last-child {
+  border-bottom: none;
+}
+
+.faqAccordion .antCollapseHeader {
+  padding: 20px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #17161a;
+  background: white;
+  border-radius: 0;
+  transition: all 0.3s ease;
+}
+
+.faqAccordion .antCollapseHeader:hover {
+  background: #ffffff;
+  color: #F668AC;
+}
+
+.faqAccordion .antCollapseContent {
+  background: #ffffff;
+  border-radius: 0;
+}
+
+.faqAccordion .antCollapseContentBox {
+  padding: 20px 24px;
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+}
+
+.faqAccordion .antCollapseExpandIcon {
+  color: #F668AC;
+  font-size: 16px;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .faqSection {
+    padding: 60px 0;
+  }
+  
+  .contactForm {
+    padding: 30px 20px;
+  }
+  
+  .formHeader h1 {
+    font-size: 28px;
+  }
+  
+  .formHeader h2 {
+    font-size: 18px;
+  }
+  
+  .faqHeader h2 {
+    font-size: 24px;
+  }
+  
+  .faqHeader h3 {
+    font-size: 18px;
+  }
+  
+  .faqAccordion .antCollapseHeader {
+    padding: 16px 20px;
+    font-size: 14px;
+  }
+  
+  .faqAccordion .antCollapseContentBox {
+    padding: 16px 20px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contactForm {
+    padding: 24px 16px;
+  }
+  
+  .formHeader h1 {
+    font-size: 24px;
+  }
+  
+  .formHeader h2 {
+    font-size: 16px;
+  }
+  
+  .faqHeader h2 {
+    font-size: 20px;
+  }
+  
+  .faqHeader h3 {
+    font-size: 16px;
+  }
+  
+  .faqAccordion .antCollapseHeader {
+    padding: 12px 16px;
+    font-size: 13px;
+  }
+  
+  .faqAccordion .antCollapseContentBox {
+    padding: 12px 16px;
+    font-size: 12px;
+  }
+}

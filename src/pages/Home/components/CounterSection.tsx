@@ -6,7 +6,7 @@ import {
   GlobalOutlined, 
   PrinterOutlined 
 } from '@ant-design/icons';
-import './CounterSection.css';
+import styles from './CounterSection.module.css';
 
 const CounterSection: React.FC = () => {
   const counters = [
@@ -37,16 +37,16 @@ const CounterSection: React.FC = () => {
   ];
 
   return (
-    <section className="counter-section">
-      <div className="container">
+    <section className={styles.counterSection}>
+      <div className={styles.container}>
         <Row gutter={[32, 32]}>
           {counters.map((counter, index) => (
             <Col xs={12} sm={12} lg={6} key={index}>
-              <div className="counter-item">
-                <div className="counter-icon">
+              <div className={styles.counterItem}>
+                <div className={styles.counterIcon}>
                   {counter.icon}
                 </div>
-                <div className="counter-content">
+                <div className={styles.counterContent}>
                   <Statistic
                     value={counter.value}
                     valueStyle={{ 
@@ -55,7 +55,7 @@ const CounterSection: React.FC = () => {
                       fontWeight: 'bold' 
                     }}
                   />
-                  <h4 className="counter-title">{counter.title}</h4>
+                  <h4 className={styles.counterTitle}>{counter.title}</h4>
                 </div>
               </div>
             </Col>

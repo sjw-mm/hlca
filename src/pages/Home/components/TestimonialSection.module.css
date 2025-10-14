@@ -1,0 +1,188 @@
+/* TestimonialSection 模块化样式 */
+/* 客户评价区域样式 */
+.testimonialSection {
+  padding: 80px 0;
+  background: white;
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.sectionHeader h2 {
+  font-size: 36px;
+  color: #17161a;
+  margin-bottom: 16px;
+  font-weight: 700;
+}
+
+.sectionHeader h3 {
+  font-size: 24px;
+  color: #666;
+  margin: 0;
+  font-weight: 500;
+}
+
+.testimonialImage {
+  text-align: center;
+}
+
+.testimonialImage img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(246, 104, 172, 0.1);
+}
+
+.testimonialsContent {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.testimonialCard {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(246, 104, 172, 0.1);
+  transition: all 0.3s ease;
+}
+
+.testimonialCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(246, 104, 172, 0.15);
+}
+
+.testimonialContent {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.testimonialAvatar {
+  flex-shrink: 0;
+}
+
+.avatar {
+  border: 3px solid #F668AC;
+}
+
+.testimonialInfo {
+  flex: 1;
+}
+
+.testimonialName {
+  font-size: 18px;
+  color: #17161a;
+  margin-bottom: 8px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.testimonialName .position {
+  font-size: 14px;
+  color: #666;
+  font-weight: 400;
+  margin-left: 8px;
+}
+
+.testimonialRating {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.ratingStars .antRateStar {
+  color: #F668AC;
+  font-size: 16px;
+}
+
+.ratingText {
+  font-size: 16px;
+  color: #F668AC;
+  font-weight: 600;
+}
+
+.testimonialText {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .testimonialSection {
+    padding: 60px 0;
+  }
+  
+  .sectionHeader {
+    margin-bottom: 40px;
+  }
+  
+  .sectionHeader h2 {
+    font-size: 28px;
+  }
+  
+  .sectionHeader h3 {
+    font-size: 20px;
+  }
+  
+  .testimonialImage {
+    margin-bottom: 32px;
+  }
+  
+  .testimonialContent {
+    flex-direction: column;
+    text-align: center;
+    gap: 16px;
+  }
+  
+  .testimonialRating {
+    justify-content: center;
+  }
+  
+  .testimonialName {
+    font-size: 16px;
+  }
+  
+  .testimonialText {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sectionHeader h2 {
+    font-size: 24px;
+  }
+  
+  .sectionHeader h3 {
+    font-size: 18px;
+  }
+  
+  .testimonialContent {
+    gap: 12px;
+  }
+  
+  .testimonialName {
+    font-size: 14px;
+  }
+  
+  .testimonialName .position {
+    font-size: 12px;
+  }
+  
+  .ratingStars .antRateStar {
+    font-size: 14px;
+  }
+  
+  .ratingText {
+    font-size: 14px;
+  }
+  
+  .testimonialText {
+    font-size: 12px;
+  }
+}

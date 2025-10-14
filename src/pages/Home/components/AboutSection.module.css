@@ -1,0 +1,241 @@
+/* AboutSection 模块化样式 */
+/* 关于我们区域样式 */
+.aboutSection {
+  padding: 80px 0;
+  background: white;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.aboutImage {
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+}
+
+.imageWrapper img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(246, 104, 172, 0.15);
+}
+
+.statsOverlay {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  z-index: 2;
+}
+
+.statsCard {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(246, 104, 172, 0.15);
+  background: white;
+  padding: 20px;
+  min-width: 200px;
+}
+
+.aboutContent h2 {
+  font-size: 36px;
+  color: #17161a;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.aboutContent h3 {
+  font-size: 24px;
+  color: #666;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.aboutContent p {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #666;
+  /* margin-bottom: 10px; */
+}
+
+.aboutFeatures {
+  margin: 40px 0;
+}
+
+.featureItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 24px;
+  background: #ffffff;
+  border-radius: 12px;
+  border-left: 4px solid #F668AC;
+}
+
+.featureIcon {
+  font-size: 32px;
+  color: #F668AC;
+  margin-top: 8px;
+}
+
+.featureText h4 {
+  font-size: 20px;
+  color: #17161a;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.featureText p {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.videoWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.videoThumbnail {
+  position: relative;
+  width: 100%;
+  max-width: 200px;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.videoThumbnail:hover {
+  transform: scale(1.05);
+}
+
+.videoThumbnail img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.playButton {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 60px;
+  background: rgba(246, 104, 172, 0.9);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.videoThumbnail:hover .playButton {
+  background: #F668AC;
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+.aboutBottomText {
+  font-size: 16px;
+  color: #666;
+  font-style: italic;
+  margin: 20px 0;
+}
+
+.aboutBtn {
+  height: 56px;
+  padding: 0 32px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  background: #F668AC;
+  border-color: #F668AC;
+  transition: all 0.3s ease;
+}
+
+.aboutBtn:hover {
+  background: #d4b547;
+  border-color: #d4b547;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(246, 104, 172, 0.3);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .aboutSection {
+    padding: 60px 0;
+  }
+  
+  .aboutContent h2 {
+    font-size: 28px;
+  }
+  
+  .aboutContent h3 {
+    font-size: 20px;
+  }
+  
+  .featureItem {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .featureIcon {
+    margin-top: 0;
+    margin-bottom: 12px;
+  }
+  
+  .statsOverlay {
+    position: static;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .statsCard {
+    min-width: 150px;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .aboutContent h2 {
+    font-size: 24px;
+  }
+  
+  .aboutContent h3 {
+    font-size: 18px;
+  }
+  
+  .featureItem {
+    padding: 16px;
+  }
+  
+  .videoThumbnail {
+    max-width: 150px;
+  }
+  
+  .playButton {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+  }
+}

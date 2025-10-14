@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { PlayCircleOutlined, PauseCircleOutlined, FullscreenOutlined, SoundOutlined, MutedOutlined } from '@ant-design/icons';
-import './index.css';
+import styles from './index.module.css';
 
 interface VideoPlayerProps {
   src: string;
@@ -14,13 +14,12 @@ interface VideoPlayerProps {
   onPlay?: () => void;
   onPause?: () => void;
   onEnded?: () => void;
-  onError?: (error: any) => void;
+  onError?: (error: Error) => void;
 }
 
 const VideoPlayer: React.FC<VideoPlayerProps> = ({
   src,
   poster,
-  title,
   className = '',
   autoPlay = false,
   muted = false,
@@ -38,7 +37,7 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
-  const [volume, setVolume] = useState(1);
+  const [, setVolume] = useState(1);
   const [isMuted, setIsMuted] = useState(muted);
   const [isFullscreen, setIsFullscreen] = useState(false);
   const [showControls, setShowControls] = useState(true);
@@ -86,9 +85,9 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
       onEnded?.();
     };
 
-    const handleError = (e: any) => {
+    const handleError = () => {
       setIsLoading(false);
-      onError?.(e);
+      onError?.(new Error('Video playback error'));
     };
 
     const handleVolumeChange = () => {
@@ -155,18 +154,18 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
     if (!isFullscreen) {
       if (container.requestFullscreen) {
         container.requestFullscreen();
-      } else if ((container as any).webkitRequestFullscreen) {
-        (container as any).webkitRequestFullscreen();
-      } else if ((container as any).msRequestFullscreen) {
-        (container as any).msRequestFullscreen();
+      } else if ((container as unknown as HTMLElement & { webkitRequestFullscreen?: () => void }).webkitRequestFullscreen) {
+        (container as unknown as HTMLElement & { webkitRequestFullscreen: () => void }).webkitRequestFullscreen();
+      } else if ((container as unknown as HTMLElement & { msRequestFullscreen?: () => void }).msRequestFullscreen) {
+        (container as unknown as HTMLElement & { msRequestFullscreen: () => void }).msRequestFullscreen();
       }
     } else {
       if (document.exitFullscreen) {
         document.exitFullscreen();
-      } else if ((document as any).webkitExitFullscreen) {
-        (document as any).webkitExitFullscreen();
-      } else if ((document as any).msExitFullscreen) {
-        (document as any).msExitFullscreen();
+      } else if ((document as Document & { webkitExitFullscreen?: () => void }).webkitExitFullscreen) {
+        (document as Document & { webkitExitFullscreen: () => void }).webkitExitFullscreen();
+      } else if ((document as Document & { msExitFullscreen?: () => void }).msExitFullscreen) {
+        (document as Document & { msExitFullscreen: () => void }).msExitFullscreen();
       }
     }
   };
@@ -221,17 +220,17 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
   return (
     <div 
       ref={containerRef}
-      className={`video-player ${className} ${isFullscreen ? 'fullscreen' : ''}`}
+      className={`${styles.videoPlayer} ${className} ${isFullscreen ? styles.fullscreen : ''}`}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
       onTouchStart={handleTouchStart}
     >
-      <div className="video-container">
+      <div className={styles.videoContainer}>
         <video
           ref={videoRef}
           src={src}
           poster={poster}
-          className="video-element"
+          className={styles.videoElement}
           autoPlay={autoPlay}
           muted={muted}
           loop={loop}
@@ -241,65 +240,65 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
         
         {/* 加载指示器 */}
         {isLoading && (
-          <div className="loading-overlay">
-            <div className="loading-spinner"></div>
+          <div className={styles.loadingOverlay}>
+            <div className={styles.loadingSpinner}></div>
           </div>
         )}
 
         {/* 播放按钮覆盖层 */}
         {!isPlaying && !isLoading && (
-          <div className="play-overlay" onClick={togglePlay}>
-            <PlayCircleOutlined className="play-icon" />
+          <div className={styles.playOverlay} onClick={togglePlay}>
+            <PlayCircleOutlined className={styles.playIcon} />
           </div>
         )}
 
         {/* 控制栏 */}
         {controls && showControls && (
-          <div className="controls-overlay">
-            <div className="controls-bar">
+          <div className={styles.controlsOverlay}>
+            <div className={styles.controlsBar}>
               {/* 进度条 */}
               <div 
                 ref={progressRef}
-                className="progress-container"
+                className={styles.progressContainer}
                 onClick={handleProgressClick}
               >
-                <div className="progress-track">
+                <div className={styles.progressTrack}>
                   <div 
-                    className="progress-fill"
+                    className={styles.progressFill}
                     style={{ width: `${progressPercent}%` }}
                   />
                   <div 
-                    className="progress-thumb"
+                    className={styles.progressThumb}
                     style={{ left: `${progressPercent}%` }}
                   />
                 </div>
               </div>
 
               {/* 控制按钮 */}
-              <div className="controls-buttons">
-                <div className="left-controls">
+              <div className={styles.controlsButtons}>
+                <div className={styles.leftControls}>
                   <button 
-                    className="control-btn play-btn"
+                    className={styles.controlBtn}
                     onClick={togglePlay}
                   >
                     {isPlaying ? <PauseCircleOutlined /> : <PlayCircleOutlined />}
                   </button>
                   
                   <button 
-                    className="control-btn volume-btn"
+                    className={styles.controlBtn}
                     onClick={toggleMute}
                   >
                     {isMuted ? <MutedOutlined /> : <SoundOutlined />}
                   </button>
                   
-                  <span className="time-display">
+                  <span className={styles.timeDisplay}>
                     {formatTime(currentTime)} / {formatTime(duration)}
                   </span>
                 </div>
 
-                <div className="right-controls">
+                <div className={styles.rightControls}>
                   <button 
-                    className="control-btn fullscreen-btn"
+                    className={styles.controlBtn}
                     onClick={toggleFullscreen}
                   >
                     <FullscreenOutlined />

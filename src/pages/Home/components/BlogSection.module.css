@@ -1,0 +1,310 @@
+/* BlogSection 模块化样式 */
+/* 博客区域样式 */
+.blogSection {
+  padding: 80px 0;
+  background: #f8f9fa;
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.sectionHeader h2 {
+  font-size: 36px;
+  color: #17161a;
+  margin-bottom: 16px;
+  font-weight: 700;
+}
+
+.sectionHeader h3 {
+  font-size: 24px;
+  color: #666;
+  margin: 0;
+  font-weight: 500;
+}
+
+.blogCard {
+  height: 100%;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(246, 104, 172, 0.1);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.blogCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 32px rgba(246, 104, 172, 0.15);
+}
+
+.blogImage {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.blogImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.3s ease;
+}
+
+.blogCard:hover .blogImage img {
+  transform: scale(1.05);
+}
+
+/* 视频卡片样式 */
+.videoCard .blogImage {
+  cursor: pointer;
+}
+
+.videoOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  transition: all 0.3s ease;
+  z-index: 2;
+}
+
+/* .videoCard:hover .videoOverlay {
+  opacity: 1;
+} */
+
+.playIcon {
+  font-size: 48px;
+  color: #F668AC;
+  margin-bottom: 8px;
+  transition: all 0.3s ease;
+}
+
+.videoCard:hover .playIcon {
+  transform: scale(1.1);
+  color: #E91E63;
+}
+
+.videoLabel {
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  background: rgba(246, 104, 172, 0.9);
+  padding: 4px 12px;
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+}
+
+.videoIndicator {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #F668AC;
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 12px;
+  padding: 8px 12px;
+  background: rgba(246, 104, 172, 0.1);
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.videoCard:hover .videoIndicator {
+  background: rgba(246, 104, 172, 0.2);
+  transform: translateY(-2px);
+}
+
+.videoIcon {
+  font-size: 16px;
+}
+
+.blogMeta {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+  font-size: 12px;
+  color: #666;
+}
+
+.blogAuthor,
+.blogDate {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.blogAuthor {
+  color: #F668AC;
+  font-weight: 500;
+}
+
+.blogTitle {
+  font-size: 18px;
+  color: #17161a;
+  margin-bottom: 12px;
+  font-weight: 600;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.blogExcerpt {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.blogReadMore {
+  color: #F668AC;
+  font-weight: 600;
+  padding: 0;
+  height: auto;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+}
+
+.blogReadMore:hover {
+  color: #d4b547;
+  transform: translateX(4px);
+}
+
+.blogReadMore .anticon {
+  transition: transform 0.3s ease;
+}
+
+.blogReadMore:hover .anticon {
+  transform: translateX(4px);
+}
+
+/* 视频模态框样式 */
+.videoModal .antModalContent {
+  padding: 0;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.videoModal .antModalHeader {
+  background: #F668AC;
+  border-bottom: none;
+  padding: 16px 24px;
+}
+
+.videoModal .antModalTitle {
+  color: white;
+  font-weight: 600;
+}
+
+.videoModal .antModalClose {
+  color: white;
+}
+
+.videoModal .antModalClose:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.videoModal .antModalBody {
+  padding: 0;
+}
+
+/* 移动端视频覆盖层优化 */
+@media (max-width: 768px) {
+  .videoOverlay {
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.3);
+  }
+  
+  .playIcon {
+    font-size: 40px;
+  }
+  
+  .videoLabel {
+    font-size: 12px;
+    padding: 3px 8px;
+  }
+  
+  .videoIndicator {
+    font-size: 13px;
+    padding: 6px 10px;
+  }
+  
+  .videoIcon {
+    font-size: 14px;
+  }
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .blogSection {
+    padding: 60px 0;
+  }
+  
+  .sectionHeader {
+    margin-bottom: 40px;
+  }
+  
+  .sectionHeader h2 {
+    font-size: 28px;
+  }
+  
+  .sectionHeader h3 {
+    font-size: 20px;
+  }
+  
+  .blogImage {
+    height: 180px;
+  }
+  
+  .blogMeta {
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+  
+  .blogTitle {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .blogExcerpt {
+    font-size: 13px;
+    margin-bottom: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sectionHeader h2 {
+    font-size: 24px;
+  }
+  
+  .sectionHeader h3 {
+    font-size: 18px;
+  }
+  
+  .blogImage {
+    height: 160px;
+  }
+  
+  .blogTitle {
+    font-size: 14px;
+  }
+  
+  .blogExcerpt {
+    font-size: 12px;
+  }
+}

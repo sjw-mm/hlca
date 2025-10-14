@@ -1,23 +1,23 @@
 import React from 'react';
 import { UserOutlined, AimOutlined, StarOutlined, HeartOutlined, TeamOutlined } from '@ant-design/icons';
 import { useTranslation } from 'react-i18next';
-import './index.css';
+import styles from './index.module.css';
 
 const ProfileDetail: React.FC = () => {
   const { t } = useTranslation();
 
   return (
-    <div className="profile-detail-page">
-      <div className="profile-detail-container">
+    <div className={styles.profileDetailPage}>
+      <div className={styles.profileDetailContainer}>
         {/* 我们的名字 */}
-        <section className="profile-section">
-          <div className="section-header">
-            <div className="section-image-placeholder">
+        <section className={styles.profileSection}>
+          <div className={styles.profileSectionHeader}>
+            <div className={styles.profileSectionImagePlaceholder}>
               <UserOutlined />
             </div>
-            <h2 className="section-title">{t('profile.ourName.title')}</h2>
+            <h2 className={styles.profileSectionTitle}>{t('profile.ourName.title')}</h2>
           </div>
-          <div className="section-content">
+          <div className={styles.profileSectionContent}>
             <p>{t('profile.ourName.description1')}</p>
             <p>{t('profile.ourName.description2')}</p>
             <p>{t('profile.ourName.description3')}</p>
@@ -25,79 +25,79 @@ const ProfileDetail: React.FC = () => {
         </section>
 
         {/* 我们的使命与愿景 */}
-        <section className="profile-section">
-          <div className="section-header">
-            <div className="section-image-placeholder">
+        <section className={styles.profileSection}>
+          <div className={styles.profileSectionHeader}>
+            <div className={styles.profileSectionImagePlaceholder}>
               <AimOutlined />
             </div>
-            <h2 className="section-title">{t('profile.mission.title')}</h2>
+            <h2 className={styles.profileSectionTitle}>{t('profile.mission.title')}</h2>
           </div>
-          <div className="section-content">
+          <div className={styles.profileSectionContent}>
             <p>{t('profile.mission.description1')}</p>
             <p>{t('profile.mission.description2')}</p>
           </div>
         </section>
 
         {/* 我们的特色 */}
-        <section className="profile-section">
-          <div className="section-header">
-            <div className="section-image-placeholder">
+        <section className={styles.profileSection}>
+          <div className={styles.profileSectionHeader}>
+            <div className={styles.profileSectionImagePlaceholder}>
               <StarOutlined />
             </div>
-            <h2 className="section-title">{t('profile.features.title')}</h2>
+            <h2 className={styles.profileSectionTitle}>{t('profile.features.title')}</h2>
           </div>
-          <div className="section-content">
-            <div className="feature-item">
-              <h3 className="feature-title">{t('profile.features.safety.title')}</h3>
+          <div className={styles.profileSectionContent}>
+            <div className={styles.profileFeatureItem}>
+              <h3 className={styles.profileFeatureTitle}>{t('profile.features.safety.title')}</h3>
               <p>{t('profile.features.safety.description')}</p>
             </div>
-            <div className="feature-item">
-              <h3 className="feature-title">{t('profile.features.etiquette.title')}</h3>
+            <div className={styles.profileFeatureItem}>
+              <h3 className={styles.profileFeatureTitle}>{t('profile.features.etiquette.title')}</h3>
               <p>{t('profile.features.etiquette.description')}</p>
             </div>
-            <div className="feature-item">
-              <h3 className="feature-title">{t('profile.features.professional.title')}</h3>
+            <div className={styles.profileFeatureItem}>
+              <h3 className={styles.profileFeatureTitle}>{t('profile.features.professional.title')}</h3>
               <p>{t('profile.features.professional.description')}</p>
             </div>
-            <div className="feature-item">
-              <h3 className="feature-title">{t('profile.features.matching.title')}</h3>
+            <div className={styles.profileFeatureItem}>
+              <h3 className={styles.profileFeatureTitle}>{t('profile.features.matching.title')}</h3>
               <p>{t('profile.features.matching.description')}</p>
             </div>
-            <div className="feature-item">
-              <h3 className="feature-title">{t('profile.features.community.title')}</h3>
+            <div className={styles.profileFeatureItem}>
+              <h3 className={styles.profileFeatureTitle}>{t('profile.features.community.title')}</h3>
               <p>{t('profile.features.community.description')}</p>
             </div>
           </div>
         </section>
 
         {/* 我们的价值观 */}
-        <section className="profile-section">
-          <div className="section-header">
-            <div className="section-image-placeholder">
+        <section className={styles.profileSection}>
+          <div className={styles.profileSectionHeader}>
+            <div className={styles.profileSectionImagePlaceholder}>
               <HeartOutlined />
             </div>
-            <h2 className="section-title">{t('profile.values.title')}</h2>
+            <h2 className={styles.profileSectionTitle}>{t('profile.values.title')}</h2>
           </div>
-          <div className="section-content">
-            <div className="values-grid">
-              <div className="value-item">
-                <h3 className="value-title">{t('profile.values.sincerity.title')}</h3>
+          <div className={styles.profileSectionContent}>
+            <div className={styles.profileValuesGrid}>
+              <div className={styles.profileValueItem}>
+                <h3 className={styles.profileValueTitle}>{t('profile.values.sincerity.title')}</h3>
                 <p>{t('profile.values.sincerity.description')}</p>
               </div>
-              <div className="value-item">
-                <h3 className="value-title">{t('profile.values.openness.title')}</h3>
+              <div className={styles.profileValueItem}>
+                <h3 className={styles.profileValueTitle}>{t('profile.values.openness.title')}</h3>
                 <p>{t('profile.values.openness.description')}</p>
               </div>
-              <div className="value-item">
-                <h3 className="value-title">{t('profile.values.respect.title')}</h3>
+              <div className={styles.profileValueItem}>
+                <h3 className={styles.profileValueTitle}>{t('profile.values.respect.title')}</h3>
                 <p>{t('profile.values.respect.description')}</p>
               </div>
-              <div className="value-item">
-                <h3 className="value-title">{t('profile.values.growth.title')}</h3>
+              <div className={styles.profileValueItem}>
+                <h3 className={styles.profileValueTitle}>{t('profile.values.growth.title')}</h3>
                 <p>{t('profile.values.growth.description')}</p>
               </div>
-              <div className="value-item">
-                <h3 className="value-title">{t('profile.values.connection.title')}</h3>
+              <div className={styles.profileValueItem}>
+                <h3 className={styles.profileValueTitle}>{t('profile.values.connection.title')}</h3>
                 <p>{t('profile.values.connection.description')}</p>
               </div>
             </div>
@@ -105,15 +105,15 @@ const ProfileDetail: React.FC = () => {
         </section>
 
         {/* 加入我们 */}
-        <section className="profile-section">
-          <div className="section-header">
-            <div className="section-image-placeholder">
+        <section className={styles.profileSection}>
+          <div className={styles.profileSectionHeader}>
+            <div className={styles.profileSectionImagePlaceholder}>
               <TeamOutlined />
             </div>
-            <h2 className="section-title">{t('profile.joinUs.title')}</h2>
+            <h2 className={styles.profileSectionTitle}>{t('profile.joinUs.title')}</h2>
           </div>
-          <div className="section-content">
-            <div className="join-content">
+          <div className={styles.profileSectionContent}>
+            <div className={styles.profileJoinContent}>
               <p>{t('profile.joinUs.description1')}</p>
               <p>{t('profile.joinUs.description2')}</p>
               <p>{t('profile.joinUs.description3')}</p>

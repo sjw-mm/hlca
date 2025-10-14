@@ -1,0 +1,115 @@
+/* CounterSection 模块化样式 */
+/* 统计数据计数器区域样式 */
+.counterSection {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #17161a 0%, #2a2830 100%);
+  color: white;
+}
+
+.counterItem {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 30px 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.counterItem:hover {
+  background: rgba(246, 104, 172, 0.1);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(246, 104, 172, 0.2);
+}
+
+.counterIcon {
+  font-size: 48px;
+  color: #F668AC;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  background: rgba(246, 104, 172, 0.1);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.counterItem:hover .counterIcon {
+  background: rgba(246, 104, 172, 0.2);
+  transform: scale(1.1);
+}
+
+.counterContent {
+  flex: 1;
+}
+
+.counterContent .antStatistic {
+  margin-bottom: 8px;
+}
+
+.counterContent .antStatisticContent {
+  color: #F668AC !important;
+}
+
+.counterTitle {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .counterSection {
+    padding: 60px 0;
+  }
+  
+  .counterItem {
+    flex-direction: column;
+    text-align: center;
+    padding: 24px 16px;
+    gap: 16px;
+  }
+  
+  .counterIcon {
+    width: 60px;
+    height: 60px;
+    font-size: 36px;
+  }
+  
+  .counterContent .antStatistic {
+    margin-bottom: 4px;
+  }
+  
+  .counterContent .antStatisticContent {
+    font-size: 28px !important;
+  }
+  
+  .counterTitle {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .counterItem {
+    padding: 20px 12px;
+  }
+  
+  .counterIcon {
+    width: 50px;
+    height: 50px;
+    font-size: 28px;
+  }
+  
+  .counterContent .antStatisticContent {
+    font-size: 24px !important;
+  }
+  
+  .counterTitle {
+    font-size: 12px;
+  }
+}

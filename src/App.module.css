@@ -1,0 +1,74 @@
+/* App 模块化样式 */
+#root {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+.logo {
+  height: 32px;
+  margin: 16px;
+  background: rgba(255, 255, 255, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.siteLayout .siteLayoutBackground {
+  background: #fff;
+}
+
+.antLayoutSiderChildren {
+  display: flex;
+  flex-direction: column;
+}
+
+.antLayoutHeader {
+  padding: 0;
+  background: #fff;
+}
+
+.headerUserInfo {
+  display: flex;
+  align-items: center;
+  margin-right: var(--font-size-base);
+}
+
+.contentCard {
+  margin: var(--font-size-base);
+  padding: 2var(--radius-sm);
+  background: #fff;
+  border-radius: 2px;
+}
+
+.dashboardCard {
+  background: var(--background-tertiary);
+  padding: var(--font-size-xl);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--font-size-base);
+}
+
+.userListItem {
+  background: white;
+  padding: var(--font-size-xs);
+  border-radius: var(--radius-sm);
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: var(--radius-md);
+}
+
+.settingsInput {
+  width: 100%;
+  padding: var(--radius-md);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-color);
+}
+
+.settingsTextarea {
+  width: 100%;
+  padding: var(--radius-md);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-color);
+  min-height: var(--spacing-6xl);
+}

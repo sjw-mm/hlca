@@ -8,7 +8,7 @@ import news_5 from '@/assets/image/news-5.jpg';
 import news_6 from '@/assets/image/news-6.jpg';
 import news_7 from '@/assets/image/news-7.jpg';
 import news_8 from '@/assets/image/news-8.jpg';
-import './NewsSection.css';
+import styles from './NewsSection.module.css';
 
 const NewsSection: React.FC = () => {
   const { t } = useTranslation();
@@ -26,17 +26,17 @@ const NewsSection: React.FC = () => {
   ];
 
   return (
-    <section className="news-section">
-      <div className="container">
-        <h2 className="section-title">{t('news.title')}</h2>
-        <div className="news-grid">
+    <section className={styles.newsSection}>
+      <div className={styles.container}>
+        <h2 className={styles.sectionTitle}>{t('news.title')}</h2>
+        <div className={styles.newsGrid}>
           {newsImages.map((news) => (
-            <div key={news.id} className="news-item">
-              <div className="news-image-container">
+            <div key={news.id} className={styles.newsItem}>
+              <div className={styles.imageContainer}>
                 <img
                   src={news.src}
                   alt={news.alt}
-                  className="news-image"
+                  className={styles.newsImage}
                   loading="lazy"
                 />
               </div>

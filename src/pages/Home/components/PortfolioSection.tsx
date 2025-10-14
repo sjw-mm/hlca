@@ -1,7 +1,7 @@
 import React from 'react';
 import { Row, Col, Card } from 'antd';
 import { ArrowRightOutlined } from '@ant-design/icons';
-import './PortfolioSection.css';
+import styles from './PortfolioSection.module.css';
 
 const PortfolioSection: React.FC = () => {
   const projects = [
@@ -28,9 +28,9 @@ const PortfolioSection: React.FC = () => {
   ];
 
   return (
-    <section className="portfolio-section">
-      <div className="container">
-        <div className="section-header">
+    <section className={styles.portfolioSection}>
+      <div className={styles.container}>
+        <div className={styles.sectionHeader}>
           <h2>项目</h2>
           <h3>最近项目</h3>
         </div>
@@ -39,20 +39,20 @@ const PortfolioSection: React.FC = () => {
           {projects.map((project, index) => (
             <Col xs={24} sm={12} lg={12} key={index}>
               <Card 
-                className="project-card"
+                className={styles.projectCard}
                 hoverable
                 cover={
-                  <div className="project-image">
+                  <div className={styles.projectImage}>
                     <img src={project.image} alt={project.title} />
-                    <div className="project-overlay">
-                      <ArrowRightOutlined className="project-icon" />
+                    <div className={styles.projectOverlay}>
+                      <ArrowRightOutlined className={styles.projectIcon} />
                     </div>
                   </div>
                 }
               >
-                <div className="project-content">
-                  <h3 className="project-title">{project.title}</h3>
-                  <p className="project-category">{project.category}</p>
+                <div className={styles.projectContent}>
+                  <h3 className={styles.projectTitle}>{project.title}</h3>
+                  <p className={styles.projectCategory}>{project.category}</p>
                 </div>
               </Card>
             </Col>

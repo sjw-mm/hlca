@@ -1,7 +1,7 @@
 import React from 'react';
 import { Row, Col, Card } from 'antd';
 import { useTranslation } from 'react-i18next';
-import './TeamDetail.css';
+import styles from './TeamDetail.module.css';
 import team_1 from '@/assets/image/team-1.jpg';
 import team_2 from '@/assets/image/team-2.jpg';
 import team_3 from '@/assets/image/team-3.jpeg';
@@ -10,7 +10,7 @@ import team_5 from '@/assets/image/team-5.jpeg';
 import team_6 from '@/assets/image/team-6.jpeg';
 import team_7 from '@/assets/image/team-7.jpeg';
 
-const TeamSection: React.FC = () => {
+const TeamDetail: React.FC = () => {
   const { t } = useTranslation();
   
   const teamMembers = [
@@ -59,9 +59,9 @@ const TeamSection: React.FC = () => {
   ];
 
   return (
-    <section className="team-detail-section">
-      <div className="container">
-        <div className="section-header">
+    <section className={styles.teamDetailSection}>
+      <div className={styles.container}>
+        <div className={styles.sectionHeader}>
           <h2>{t('team.coreTeam')}</h2>
         </div>
         
@@ -69,21 +69,21 @@ const TeamSection: React.FC = () => {
           {teamMembers.map((member, index) => (
             <Col xs={24} sm={12} lg={6} key={index}>
               <Card 
-                className="team-card"
+                className={styles.teamCard}
                 hoverable
                 cover={
-                  <div className="member-image">
+                  <div className={styles.memberImage}>
                     <img src={member.image} alt={member.name} />
-                    <div className="member-overlay">
-                      <p className="member-description">{member.description}</p>
+                    <div className={styles.memberOverlay}>
+                      <p className={styles.memberDescription}>{member.description}</p>
                     </div>
                   </div>
                 }
               >
-                <div className="member-info">
-                  <h4 className="member-name">{member.name}</h4>
-                  <p className="member-position">{member.position}</p>
-                  <div className="member-divider"></div>
+                <div className={styles.memberInfo}>
+                  <h4 className={styles.memberName}>{member.name}</h4>
+                  <p className={styles.memberPosition}>{member.position}</p>
+                  <div className={styles.memberDivider}></div>
                 </div>
               </Card>
             </Col>
@@ -94,4 +94,4 @@ const TeamSection: React.FC = () => {
   );
 };
 
-export default TeamSection;
+export default TeamDetail;

@@ -1,10 +1,10 @@
 import React from 'react';
 import BlogSection from '../Home/components/BlogSection';
-import './index.css';
+import styles from './index.module.css';
 
 const Blog: React.FC = () => {
   return (
-    <div className="blog-page">
+    <div className={styles.blogPage}>
       {/* 博客内容 */}
       <BlogSection />
     </div>

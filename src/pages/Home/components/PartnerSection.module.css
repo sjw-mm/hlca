@@ -1,0 +1,27 @@
+/* PartnerSection 模块化样式 */
+.partnerSection {
+  padding: 10px 0;
+  background: #ffffff;
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.sectionHeader h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  font-size: 36px;
+  color: #17161a;
+  margin-bottom: 16px;
+  font-weight: 700;
+}
+.partnerList {
+  display: flex;
+}
+.partnerList img {
+  width: 100%;
+}

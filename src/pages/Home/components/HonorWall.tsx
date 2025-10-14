@@ -1,6 +1,6 @@
 import React from 'react';
 import { Row, Col, Card } from 'antd';
-import './HonorWall.css';
+import styles from './HonorWall.module.css';
 
 const HonorWall: React.FC = () => {
   const teamMembers = [
@@ -28,9 +28,9 @@ const HonorWall: React.FC = () => {
   ];
 
   return (
-    <section className="team-section">
-      <div className="container">
-        <div className="section-header">
+    <section className={styles.teamSection}>
+      <div className={styles.container}>
+        <div className={styles.sectionHeader}>
           <h2>荣誉墙</h2>
         </div>
         
@@ -38,17 +38,17 @@ const HonorWall: React.FC = () => {
           {teamMembers.map((member, index) => (
             <Col xs={24} sm={12} lg={6} key={index}>
               <Card 
-                className="team-card"
+                className={styles.teamCard}
                 hoverable
                 cover={
-                  <div className="member-image">
+                  <div className={styles.memberImage}>
                     <img src={member.image} alt={member.name} />
                   </div>
                 }
               >
-                <div className="member-info">
-                  <h4 className="member-name">{member.name}</h4>
-                  <p className="member-position">{member.time}</p>
+                <div className={styles.memberInfo}>
+                  <h4 className={styles.memberName}>{member.name}</h4>
+                  <p className={styles.memberPosition}>{member.time}</p>
                 </div>
               </Card>
             </Col>

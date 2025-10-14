@@ -3,16 +3,16 @@ import { Breadcrumb } from 'antd';
 import { HomeOutlined } from '@ant-design/icons';
 import { useTranslation } from 'react-i18next';
 import TeamSection from '../Home/components/TeamSection';
-import './index.css';
+import styles from './index.module.css';
 
 const Team: React.FC = () => {
   const { t } = useTranslation();
   
   return (
-    <div className="team-page">
+    <div className={styles.teamPage}>
       {/* 面包屑导航 */}
-      <section className="breadcrumb-section">
-        <div className="container">
+      <section className={styles.teamBreadcrumbSection}>
+        <div className={styles.teamContainer}>
           <Breadcrumb
             items={[
               {

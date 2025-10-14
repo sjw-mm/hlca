@@ -1,7 +1,7 @@
 import React from 'react';
 import { Row, Col, Form, Input, Button, Collapse, App } from 'antd';
 import { UserOutlined, PhoneOutlined, MailOutlined } from '@ant-design/icons';
-import './FAQSection.css';
+import styles from './FAQSection.module.css';
 
 const { TextArea } = Input;
 
@@ -39,12 +39,12 @@ const FAQSection: React.FC = () => {
   ];
 
   return (
-    <section className="faq-section">
-      <div className="container">
+    <section className={styles.faqSection}>
+      <div className={styles.container}>
         <Row gutter={[48, 48]}>
           <Col xs={24} lg={12}>
-            <div className="contact-form">
-              <div className="form-header">
+            <div className={styles.contactForm}>
+              <div className={styles.formHeader}>
                 <h1>联系我们</h1>
                 <h2>我们的顾问随时准备帮助您</h2>
               </div>
@@ -53,7 +53,7 @@ const FAQSection: React.FC = () => {
                 form={form}
                 layout="vertical"
                 onFinish={onFinish}
-                className="contact-form-content"
+                className={styles.contactFormContent}
               >
                 <Form.Item
                   name="name"
@@ -121,7 +121,7 @@ const FAQSection: React.FC = () => {
                     type="primary" 
                     htmlType="submit" 
                     size="large"
-                    className="submit-btn"
+                    className={styles.submitBtn}
                   >
                     立即提交
                   </Button>
@@ -131,8 +131,8 @@ const FAQSection: React.FC = () => {
           </Col>
           
           <Col xs={24} lg={12}>
-            <div className="faq-content">
-              <div className="faq-header">
+            <div className={styles.faqContent}>
+              <div className={styles.faqHeader}>
                 <h2>常见问题</h2>
                 <h3>常见问题解答？</h3>
                 <p>
@@ -143,7 +143,7 @@ const FAQSection: React.FC = () => {
               
               <Collapse 
                 items={faqItems}
-                className="faq-accordion"
+                className={styles.faqAccordion}
                 expandIconPosition="end"
               />
             </div>

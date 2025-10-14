@@ -3,7 +3,7 @@ import { Row, Col, Card, Image } from 'antd';
 import { useTranslation } from 'react-i18next';
 import team_1 from '@/assets/image/team-1.jpg';
 import team_2 from '@/assets/image/team-2.jpg';
-import './TeamSection.css';
+import styles from './TeamSection.module.css';
 
 const TeamSection: React.FC = () => {
   const { t } = useTranslation();
@@ -22,9 +22,9 @@ const TeamSection: React.FC = () => {
   ];
 
   return (
-    <section className="team-section">
-      <div className="container">
-        <div className="section-header">
+    <section className={styles.teamSection}>
+      <div className={styles.container}>
+        <div className={styles.sectionHeader}>
           <h2>{t('team.title')}</h2>
         </div>
         
@@ -32,7 +32,7 @@ const TeamSection: React.FC = () => {
           {teamMembers.map((member, index) => (
             <Col xs={24} sm={12} lg={8} key={index}>
               <Card 
-                className="team-card"
+                className={styles.teamCard}
                 hoverable
                 cover={
                   <Image 
@@ -43,10 +43,10 @@ const TeamSection: React.FC = () => {
                   />
                 }
               >
-                <div className="member-info">
-                  <h4 className="member-name">{member.name}</h4>
-                  <p className="member-position">{member.position}</p>
-                  <div className="member-divider"></div>
+                <div className={styles.memberInfo}>
+                  <h4 className={styles.memberName}>{member.name}</h4>
+                  <p className={styles.memberPosition}>{member.position}</p>
+                  <div className={styles.memberDivider}></div>
                 </div>
               </Card>
             </Col>

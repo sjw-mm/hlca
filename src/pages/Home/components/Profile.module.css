@@ -1,0 +1,131 @@
+/* Profile 模块化样式 */
+/* Profile组件样式 */
+.profileSection {
+  background: #fff;
+  padding: 0;
+  margin: 0;
+}
+
+/* 全屏协会简介图片 */
+.profileImageFullscreen {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  min-height: 600px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+}
+
+.profileImageFullscreen:hover {
+  transform: scale(1.02);
+}
+
+.imageOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.1) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.profileImage:hover .imageOverlay {
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.2) 100%);
+}
+
+.imageContent {
+  text-align: center;
+  color: white;
+  padding: 20px;
+  max-width: 600px;
+}
+
+.imageTitle {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  line-height: 1.2;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.imageDescription {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 24px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  opacity: 0.9;
+}
+
+.clickHint {
+  display: inline-block;
+  background: rgba(246, 104, 172, 0.9);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(246, 104, 172, 0.3);
+}
+
+.profileImage:hover .clickHint {
+  background: rgba(246, 104, 172, 1);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(246, 104, 172, 0.4);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .profileImageFullscreen {
+    height: 70vh;
+    min-height: 500px;
+  }
+  
+  .imageTitle {
+    font-size: 28px;
+  }
+  
+  .imageDescription {
+    font-size: 16px;
+  }
+  
+  .clickHint {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .profileImageFullscreen {
+    height: 60vh;
+    min-height: 400px;
+  }
+  
+  .imageContent {
+    padding: 16px;
+  }
+  
+  .imageTitle {
+    font-size: 24px;
+  }
+  
+  .imageDescription {
+    font-size: 14px;
+  }
+  
+  .clickHint {
+    padding: 8px 16px;
+    font-size: 13px;
+  }
+}

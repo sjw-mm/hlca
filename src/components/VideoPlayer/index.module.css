@@ -1,0 +1,377 @@
+/* VideoPlayer 模块化样式 */
+.antModal .antModalHeader {
+  margin-bottom: 0;
+}
+
+/* 视频播放器组件样式 */
+.videoPlayer {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  background: #000;
+  /* border-radius: 12px; */
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(246, 104, 172, 0.1);
+  transition: all 0.3s ease;
+  /* 视频播放器滚动条样式 */
+  scrollbar-width: thin;
+  scrollbar-color: #F668AC rgba(0, 0, 0, 0.1);
+}
+
+.videoPlayer::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.videoPlayer::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+}
+
+.videoPlayer::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #F668AC, #E91E63);
+  border-radius: 3px;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.videoPlayer::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #E91E63, #C2185B);
+  transform: scaleY(1.1);
+}
+
+.videoPlayer::-webkit-scrollbar-thumb:active {
+  background: linear-gradient(135deg, #C2185B, #AD1457);
+}
+
+.videoPlayer:hover {
+  box-shadow: 0 8px 24px rgba(246, 104, 172, 0.15);
+}
+
+.videoPlayer.fullscreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999;
+  border-radius: 0;
+}
+
+.videoContainer {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%; /* 16:9 宽高比 */
+  background: #000;
+}
+
+.videoElement {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  outline: none;
+}
+
+/* 加载指示器 */
+.loadingOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.loadingSpinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid rgba(246, 104, 172, 0.3);
+  border-top: 3px solid #F668AC;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* 播放按钮覆盖层 */
+.playOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 3;
+  transition: all 0.3s ease;
+}
+
+.playOverlay:hover {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.playIcon {
+  font-size: 64px;
+  color: #F668AC;
+  transition: all 0.3s ease;
+}
+
+.playOverlay:hover .playIcon {
+  transform: scale(1.1);
+  color: #E91E63;
+}
+
+/* 控制栏 */
+.controlsOverlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+  z-index: 4;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.controlsBar {
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* 进度条 */
+.progressContainer {
+  width: 100%;
+  cursor: pointer;
+  padding: 8px 0;
+}
+
+.progressTrack {
+  position: relative;
+  width: 100%;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.progressFill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: #F668AC;
+  border-radius: 2px;
+  transition: width 0.1s ease;
+}
+
+.progressThumb {
+  position: absolute;
+  top: 50%;
+  width: 12px;
+  height: 12px;
+  background: #F668AC;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.progressContainer:hover .progressThumb {
+  opacity: 1;
+}
+
+/* 控制按钮 */
+.controlsButtons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.leftControls,
+.rightControls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.controlBtn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.controlBtn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: #F668AC;
+  transform: scale(1.1);
+}
+
+.controlBtn:active {
+  transform: scale(0.95);
+}
+
+.timeDisplay {
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  min-width: 80px;
+  text-align: center;
+}
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+  .videoPlayer {
+    border-radius: 8px;
+  }
+  
+  .playIcon {
+    font-size: 48px;
+  }
+  
+  .controlsBar {
+    padding: 12px 16px;
+    gap: 8px;
+  }
+  
+  .controlBtn {
+    font-size: 16px;
+    padding: 4px;
+  }
+  
+  .timeDisplay {
+    font-size: 12px;
+    min-width: 60px;
+  }
+  
+  .progressTrack {
+    height: 4px;
+  }
+  
+  .progressThumb {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .videoPlayer {
+    border-radius: 4px;
+  }
+  
+  .playIcon {
+    font-size: 40px;
+  }
+  
+  .controlsBar {
+    padding: 12px 12px;
+    gap: 4px;
+  }
+  
+  .controlBtn {
+    font-size: 14px;
+    padding: 4px;
+  }
+  
+  .timeDisplay {
+    font-size: 11px;
+    min-width: 50px;
+  }
+  
+  .leftControls,
+  .rightControls {
+    gap: 8px;
+  }
+}
+
+/* 全屏模式 */
+.videoPlayer.fullscreen .videoContainer {
+  height: 100vh;
+  padding-bottom: 0;
+}
+
+.videoPlayer.fullscreen .videoElement {
+  object-fit: contain;
+}
+
+/* 触摸设备优化 */
+@media (hover: none) and (pointer: coarse) {
+  .progressThumb {
+    opacity: 1;
+  }
+  
+  .controlBtn:hover {
+    background: none;
+    transform: none;
+  }
+  
+  .playOverlay:hover {
+    background: rgba(0, 0, 0, 0.3);
+  }
+  
+  .playOverlay:hover .playIcon {
+    transform: none;
+    color: #F668AC;
+  }
+}
+
+/* 高分辨率屏幕优化 */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .progressTrack {
+    height: 2px;
+  }
+  
+  .progressThumb {
+    width: 12px;
+    height: 12px;
+  }
+}
+
+/* 暗色主题支持 */
+@media (prefers-color-scheme: dark) {
+  .videoPlayer {
+    background: #000;
+  }
+}
+
+/* 减少动画（用户偏好） */
+@media (prefers-reduced-motion: reduce) {
+  .videoPlayer,
+  .playIcon,
+  .controlBtn,
+  .progressFill,
+  .progressThumb,
+  .loadingSpinner {
+    transition: none;
+    animation: none;
+  }
+  
+  .loadingSpinner {
+    animation: none;
+    border: 3px solid #F668AC;
+  }
+}

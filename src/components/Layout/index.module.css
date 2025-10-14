@@ -1,0 +1,222 @@
+/* Layout 模块化样式 */
+/* Layout样式 */
+.layout {
+  min-height: 100vh;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* 顶部联系信息栏 */
+.topBar {
+  background: #F668AC;
+  color: white;
+  padding: 8px 0;
+  font-size: 14px;
+}
+
+.topBarContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contactInfo a {
+  color: white;
+  text-decoration: none;
+  margin-right: 20px;
+}
+
+.contactInfo a:hover {
+  color: #F668AC;
+}
+
+.socialLinks a {
+  color: white;
+  font-size: 16px;
+  margin-left: 12px;
+}
+
+.socialLinks a:hover {
+  color: #F668AC;
+}
+
+/* 主导航栏 */
+.mainHeader {
+  padding: 0;
+  box-shadow: 0 2px 8px rgba(246, 104, 172, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  height: 80px;
+}
+
+.headerContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+}
+.logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 80px;
+}
+
+.logo img {
+  /* margin-top: 12px; */
+  height: 30px;
+}
+.logoText {
+  margin-left: 12px;
+  /* margin-top: -12px; */
+}
+
+.desktopMenu {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.mainMenu {
+  border: none;
+  background: transparent;
+}
+
+.mainMenu .antMenuItem {
+  margin: 0 20px;
+  font-weight: 500;
+}
+
+.mainMenu .antMenuItemSelected {
+  color: #F668AC;
+}
+
+.headerActions {
+  display: flex;
+  align-items: center;
+}
+
+.mobileMenuBtn {
+  display: none;
+}
+
+/* 主要内容区域 */
+.mainContent {
+  min-height: calc(100vh - 200px);
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* 页脚 */
+.mainFooter {
+  background: #17161a;
+  color: white;
+  /* padding: 40px 0 20px; */
+}
+
+
+.footerBottom {
+  /* border-top: 1px solid #333; */
+  /* padding-top: 20px; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.copyright p {
+  color: #ccc;
+  margin: 0;
+}
+
+.footerMenu .antMenu {
+  background: transparent;
+  border: none;
+}
+
+.footerMenu .antMenuItem {
+  color: #ccc;
+}
+
+.footerMenu .antMenuItem:hover {
+  color: #F668AC;
+}
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+  .topBar {
+    padding: 4px 0;
+    font-size: 13px;
+  }
+  
+  .topBarContent {
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start;
+  }
+  
+  .contactInfo {
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+  }
+  
+  .contactInfo span,
+  .contactInfo a {
+    font-size: 13px;
+    margin-right: 0;
+    margin-bottom: 4px;
+  }
+  
+  .headerContent {
+    height: 60px;
+  }
+  
+  .desktopMenu {
+    display: none;
+  }
+  
+  .mobileMenuBtn {
+    display: block;
+  }
+  
+  .footerContent {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  
+  .footerBottom {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+/* 小屏幕优化 */
+@media (max-width: 480px) {
+  .topBar {
+    padding: 4px 0;
+    font-size: 12px;
+  }
+  .logo img {
+    height: 20px;
+  }
+  .logoText {
+    font-size: 12px;
+  }
+    
+  .contactInfo span,
+  .contactInfo a {
+    font-size: 12px;
+  }
+  
+  .container {
+    padding: 0 16px;
+  }
+}
+
+/* 容器样式 */
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 20px;
+}

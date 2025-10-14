@@ -1,0 +1,96 @@
+/* Home 模块化样式 */
+/* 首页样式 */
+.homePage {
+  background: #fff;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* 选择我们区域 */
+.chooseUsSection {
+  padding: 80px 0;
+  background: #ffffff;
+}
+
+.chooseContent h2 {
+  font-size: 34px;
+  color: #17161a;
+  margin-bottom: 16px;
+  font-weight: 700;
+}
+
+.chooseContent h3 {
+  font-size: 24px;
+  color: #666;
+  margin-bottom: 24px;
+  font-weight: 500;
+}
+
+.chooseContent p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #666;
+  margin-bottom: 32px;
+}
+
+.featureList {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 32px;
+}
+
+.featureList li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+  font-size: 16px;
+  color: #666;
+}
+
+.checkIcon {
+  color: #F668AC;
+  margin-right: 12px;
+  font-size: 18px;
+}
+
+.chooseStats {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.successCard {
+  text-align: center;
+  border: none;
+  box-shadow: 0 8px 24px rgba(246, 104, 172, 0.1);
+  border-radius: 12px;
+  padding: 40px;
+  background: linear-gradient(135deg, #F668AC 0%, #d4b547 100%);
+  color: white;
+}
+
+.successCard .antStatisticTitle {
+  color: white;
+  font-size: 18px;
+  margin-bottom: 16px;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .chooseUsSection {
+    padding: 60px 0;
+  }
+  
+  .chooseContent h2 {
+    font-size: 28px;
+  }
+  
+  .chooseContent h3 {
+    font-size: 20px;
+  }
+  
+  .successCard {
+    padding: 30px;
+  }
+}

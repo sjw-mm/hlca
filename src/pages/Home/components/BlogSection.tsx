@@ -5,7 +5,7 @@ import VideoPlayer from '@/components/VideoPlayer';
 import news_1 from '@/assets/image/news-1.jpg';
 import news_2 from '@/assets/image/news-2.jpg';
 import news_3 from '@/assets/image/news-3.jpg';
-import './BlogSection.css';
+import styles from './BlogSection.module.css';
 
 interface BlogPost {
   image: string;
@@ -64,9 +64,9 @@ const BlogSection: React.FC = () => {
   };
 
   return (
-    <section className="blog-section">
-      <div className="container">
-        <div className="section-header">
+    <section className={styles.blogSection}>
+      <div className={styles.container}>
+        <div className={styles.sectionHeader}>
           <h2>协会新闻</h2>
         </div>
         
@@ -77,31 +77,31 @@ const BlogSection: React.FC = () => {
                 className={`blog-card ${post.video ? 'video-card' : ''}`}
                 cover={
                   <div 
-                    className="blog-image"
+                    className={styles.blogImage}
                     onClick={() => post.video && handleVideoPlay(post)}
                     style={{ cursor: post.video ? 'pointer' : 'default' }}
                   >
-                    <Image  className="blog-img" src={post.image} alt={post.title} preview={false} height={400} />
+                    <Image  className={styles.blogImg} src={post.image} alt={post.title} preview={false} height={400} />
 
                     {post.video && (
-                      <div className="video-overlay">
-                        <PlayCircleOutlined className="play-icon" />
+                      <div className={styles.videoOverlay}>
+                        <PlayCircleOutlined className={styles.playIcon} />
                       </div>
                     )}
                   </div>
                 }
               >
-                <div className="blog-meta">
-                  <span className="blog-author">
+                <div className={styles.blogMeta}>
+                  <span className={styles.blogAuthor}>
                     <UserOutlined /> {post.author}
                   </span>
-                  <span className="blog-date">
+                  <span className={styles.blogDate}>
                     <ClockCircleOutlined /> {post.date}
                   </span>
                 </div>
                 
-                <h3 className="blog-title">{post.title}</h3>
-                <p className="blog-excerpt">{post.excerpt}</p>
+                <h3 className={styles.blogTitle}>{post.title}</h3>
+                <p className={styles.blogExcerpt}>{post.excerpt}</p>
               </Card>
             </Col>
           ))}
@@ -116,7 +116,7 @@ const BlogSection: React.FC = () => {
           width="90%"
           style={{ maxWidth: '800px' }}
           centered
-          className="video-modal"
+          className={styles.videoModal}
         >
           {selectedVideo && (
             <VideoPlayer
