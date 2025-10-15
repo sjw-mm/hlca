@@ -1,0 +1,37 @@
+/* 语言切换器样式 */
+.languageSwitcher {
+  color: #666;
+  border: 1px solid #d9d9d9;
+  border-radius: 6px;
+  padding: 4px 12px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.3s ease;
+}
+
+.languageSwitcher:hover {
+  color: #F668AC;
+  border-color: #F668AC;
+}
+
+.languageOption {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 0;
+}
+
+.flag {
+  font-size: 16px;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .languageSwitcher {
+    height: 28px;
+    padding: 2px 8px;
+    font-size: 12px;
+  }
+}

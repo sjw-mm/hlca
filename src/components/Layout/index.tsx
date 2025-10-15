@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Layout, Menu, theme, Space, Drawer } from 'antd';
+import React from 'react';
+import { Layout, Menu, theme, Space } from 'antd';
 import { Link, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import {
@@ -8,7 +8,7 @@ import {
 } from '@ant-design/icons';
 import LanguageSwitcher from '../LanguageSwitcher';
 import MobileBottomNav from '../MobileBottomNav';
-import './index.css';
+import styles from './index.module.css';
 import logo from '@/assets/image/logo.svg';
 
 const { Header, Content, Footer } = Layout;
@@ -18,7 +18,6 @@ interface LayoutProps {
 }
 
 const LayoutComponent: React.FC<LayoutProps> = ({ children }) => {
-  const [mobileMenuVisible, setMobileMenuVisible] = useState(false);
   const location = useLocation();
   const { t } = useTranslation();
   
@@ -50,15 +49,14 @@ const LayoutComponent: React.FC<LayoutProps> = ({ children }) => {
   ];
 
   return (
-    <Layout className="layout">
+    <Layout className={styles.layout}>
       {/* 顶部联系信息栏 */}
-      <div className="top-bar">
-        <div className="container">
-          <div className="top-bar-content">
-            <div className="contact-info">
+      <div className={styles.topBar}>
+        <div className={styles.container}>
+          <div className={styles.topBarContent}>
+            <div className={styles.contactInfo}>
               <Space>
                 <span><HomeOutlined /> 320 Granville St, Vancouver by BOSA</span>
-                {/* <a href="tel:+998556778345"><PhoneOutlined /> +998556778345</a> */}
                 <span><MailOutlined /> Info@mingminglove.com</span>
               </Space>
             </div>
@@ -67,25 +65,25 @@ const LayoutComponent: React.FC<LayoutProps> = ({ children }) => {
       </div>
 
       {/* 主导航栏 */}
-      <Header className="main-header" style={{ background: colorBgContainer }}>
-        <div className="container">
-          <div className="header-content">
-            <div className="logo">
+      <Header className={styles.mainHeader} style={{ background: colorBgContainer }}>
+        <div className={styles.container}>
+          <div className={styles.headerContent}>
+            <div className={styles.logo}>
               {/* <Link to="/"> */}
                 <img src={logo} alt="logo" />
               {/* </Link> */}
-              <div className="logo-text">{t('siteName')}</div>
+              <div className={styles.logoText}>{t('siteName')}</div>
             </div>
-            <div className="desktop-menu">
+            <div className={styles.desktopMenu}>
               <Menu
                 mode="horizontal"
                 selectedKeys={[location.pathname]}
                 items={menuItems}
-                className="main-menu"
+                className={styles.mainMenu}
               />
             </div>
 
-            <div className="header-actions">
+            <div className={styles.headerActions}>
               <Space>
                 <LanguageSwitcher />
               </Space>
@@ -94,32 +92,16 @@ const LayoutComponent: React.FC<LayoutProps> = ({ children }) => {
         </div>
       </Header>
 
-      {/* 移动端菜单 */}
-      <Drawer
-        title={t('common.menu')}
-        placement="right"
-        onClose={() => setMobileMenuVisible(false)}
-        open={mobileMenuVisible}
-        className="mobile-drawer"
-      >
-        <Menu
-          mode="vertical"
-          selectedKeys={[location.pathname]}
-          items={menuItems}
-          className="mobile-menu"
-        />
-      </Drawer>
-
       {/* 主要内容区域 */}
-      <Content className="main-content">
+      <Content className={styles.mainContent}>
         {children}
       </Content>
 
       {/* 页脚 */}
-      <Footer className="main-footer">
-        <div className="container">
-          <div className="footer-bottom">
-            <div className="copyright">
+      <Footer className={styles.mainFooter}>
+        <div className={styles.container}>
+          <div className={styles.footerBottom}>
+            <div className={styles.copyright}>
               <p>{t('footer.copyright')}</p>
             </div>
           </div>

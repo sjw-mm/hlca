@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { EyeOutlined } from '@ant-design/icons';
 import VideoPlayer from '@/components/VideoPlayer';
+// import playIcon from '@/assets/image/play.svg';
 import news_01 from '@/assets/image/news-1.jpg';
 import news_02 from '@/assets/image/news-2.jpg';
 import news_03 from '@/assets/image/news-3.jpg';
@@ -35,7 +36,7 @@ import news_27 from '@/assets/image/news/news-27.jpg';
 import news_28 from '@/assets/image/news/news-28.jpg';
 import news_29 from '@/assets/image/news/news-29.jpg';
 
-import './NewsSection.css';
+import styles from './NewsSection.module.css';
 
 interface NewsItem {
   id: number;
@@ -286,16 +287,16 @@ const NewsSection: React.FC = () => {
     switch (item.type) {
       case 'image':
         return (
-          <div className="news-card image-only" onClick={() => handleImageClick(item.src)}>
-            <div className="card-image-container">
+          <div className={`${styles.newsCard} ${styles.imageOnly}`} onClick={() => handleImageClick(item.src)}>
+            <div className={styles.cardImageContainer}>
               <img
                 src={item.src}
                 alt={item.alt}
-                className="card-image"
+                className={styles.cardImage}
                 loading="lazy"
               />
-              <div className="image-overlay">
-                <EyeOutlined className="preview-icon" />
+              <div className={styles.imageOverlay}>
+                <EyeOutlined className={styles.previewIcon} />
               </div>
             </div>
           </div>
@@ -303,38 +304,38 @@ const NewsSection: React.FC = () => {
 
       case 'image-text':
         return (
-          <div className="news-card image-text">
-            <div className="card-image-container" onClick={() => handleImageClick(item.src)}>
+          <div className={`${styles.newsCard} ${styles.imageText}`}>
+            <div className={styles.cardImageContainer} onClick={() => handleImageClick(item.src)}>
               <img
                 src={item.src}
                 alt={item.alt}
-                className="card-image"
+                className={styles.cardImage}
                 loading="lazy"
               />
-              <div className="image-overlay">
-                <EyeOutlined className="preview-icon" />
+              <div className={styles.imageOverlay}>
+                <EyeOutlined className={styles.previewIcon} />
               </div>
-              <div className="text-overlay">
-                <h3 className="card-title">{item.title}</h3>
-                <p className="card-description">{item.description}</p>
+              <div className={styles.textOverlay}>
+                <h3 className={styles.cardTitle}>{item.title}</h3>
+                <p className={styles.cardDescription}>{item.description}</p>
               </div>
             </div>
-            <div className="card-text-mobile">
-              <h3 className="card-title">{item.title}</h3>
-              <p className="card-description">{item.description}</p>
+            <div className={styles.cardTextMobile}>
+              <h3 className={styles.cardTitle}>{item.title}</h3>
+              <p className={styles.cardDescription}>{item.description}</p>
             </div>
           </div>
         );
 
       case 'video':
         return (
-          <div className="news-card video" onClick={() => handleVideoClick(item.id)}>
-            <div className="card-video-container">
+          <div className={`${styles.newsCard} ${styles.video}`} onClick={() => handleVideoClick(item.id)}>
+            <div className={styles.cardVideoContainer}>
               <VideoPlayer
                 src={item.videoSrc || ''}
                 poster={item.poster}
                 title={item.alt}
-                className="card-video"
+                className={styles.cardVideo}
                 controls={playingVideo === item.id}
                 muted={false}
                 autoPlay={playingVideo === item.id}
@@ -343,7 +344,7 @@ const NewsSection: React.FC = () => {
                 onEnded={handleVideoEnded}
               />
               {playingVideo !== item.id && (
-                <div className="video-overlay">
+                <div className={styles.videoOverlay}>
                   {/* <img src={playIcon} alt="play" className="play-icon" /> */}
                   {/* <PlayCircleOutlined className="play-icon" /> */}
                 </div>
@@ -358,12 +359,12 @@ const NewsSection: React.FC = () => {
   };
 
   return (
-    <section className="news-section">
-      <div className="container">
-        <h2 className="section-title">{t('news.title')}</h2>
-        <div className="news-grid">
+    <section className={styles.newsSection}>
+      <div className={styles.container}>
+        <h2 className={styles.sectionTitle}>{t('news.title')}</h2>
+        <div className={styles.newsGrid}>
           {newsItems.map((item) => (
-            <div key={item.id} className="news-item">
+            <div key={item.id} className={styles.newsItem}>
               {renderNewsCard(item)}
             </div>
           ))}
@@ -372,10 +373,10 @@ const NewsSection: React.FC = () => {
 
       {/* Image Preview Modal */}
       {previewImage && (
-        <div className="image-preview-modal" onClick={closePreview}>
-          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-            <button className="close-btn" onClick={closePreview}>×</button>
-            <img src={previewImage} alt="Preview" className="preview-image" />
+        <div className={styles.imagePreviewModal} onClick={closePreview}>
+          <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
+            <button className={styles.closeBtn} onClick={closePreview}>×</button>
+            <img src={previewImage} alt="Preview" className={styles.previewImage} />
           </div>
         </div>
       )}

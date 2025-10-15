@@ -8,7 +8,7 @@ import {
   PhoneOutlined,
   CalendarOutlined
 } from '@ant-design/icons';
-import './index.css';
+import styles from './index.module.css';
 
 const MobileBottomNav: React.FC = () => {
   const location = useLocation();
@@ -48,17 +48,17 @@ const MobileBottomNav: React.FC = () => {
   ];
 
   return (
-    <div className="mobile-bottom-nav">
-      <div className="mobile-nav-container">
+    <div className={styles.mobileBottomNav}>
+      <div className={styles.mobileNavContainer}>
         {navItems.map((item) => (
           <Link
             key={item.key}
             to={item.link}
-            className={`mobile-nav-item ${location.pathname === item.key ? 'active' : ''}`}
+            className={`${styles.mobileNavItem} ${location.pathname === item.key ? 'active' : ''}`}
           >
-            <div className="nav-icon">{item.icon}</div>
-            <div className="nav-label">{item.label}</div>
-            {location.pathname === item.key && <div className="nav-indicator"></div>}
+            <div className={styles.navIcon}>{item.icon}</div>
+            <div className={styles.navLabel}>{item.label}</div>
+            {location.pathname === item.key && <div className={styles.navIndicator}></div>}
           </Link>
         ))}
       </div>

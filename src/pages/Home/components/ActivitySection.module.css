@@ -1,0 +1,318 @@
+/* 活动区域样式 */
+.activitySection {
+  padding: 80px 0;
+  background: #ffffff;
+}
+.activitySection .container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.sectionHeader h2 {
+  font-size: 36px;
+  color: #17161a;
+  margin-bottom: 16px;
+  font-weight: 700;
+}
+
+.sectionHeader h3 {
+  font-size: 24px;
+  color: #666;
+  margin: 0;
+  font-weight: 500;
+}
+
+/* 活动卡片样式 */
+.activityCard {
+  height: 100%;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(246, 104, 172, 0.1);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.activityCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 32px rgba(246, 104, 172, 0.15);
+}
+
+.teamCard .antCardCover {
+  height: 400px;
+}
+
+/* 活动图片区域 */
+.activityImage {
+  position: relative;
+  height: 400px;
+  overflow: hidden;
+}
+
+.activityImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.3s ease;
+}
+
+.activityCard:hover .activityImage img {
+  transform: scale(1.05);
+}
+
+/* 活动图片覆盖层 */
+.activityOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(246, 104, 172, 0.9), rgba(233, 30, 99, 0.7));
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  opacity: 0;
+  transition: all 0.3s ease;
+  padding: 20px;
+}
+
+.activityCard:hover .activityOverlay {
+  opacity: 1;
+}
+
+.activityDate {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 8px 16px;
+  border-radius: 20px;
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+  backdrop-filter: blur(10px);
+}
+
+.activityDate .anticon {
+  font-size: 16px;
+}
+
+/* 活动内容区域 */
+.activityContent {
+  padding: 24px;
+}
+
+.activityTitle {
+  font-size: 20px;
+  color: #17161a;
+  margin-bottom: 16px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+/* 活动元信息 */
+.activityMeta {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.activityTime {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #666;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.activityTime .anticon {
+  color: #F668AC;
+  font-size: 16px;
+}
+
+.activityLocation {
+  color: #666;
+  font-size: 14px;
+  font-weight: 500;
+  background: #f0f0f0;
+  padding: 4px 12px;
+  border-radius: 12px;
+}
+
+/* 活动描述 */
+.activityDescription {
+  color: #666;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* 活动操作按钮 */
+.activityActions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.btnPrimary,
+.btnSecondary {
+  padding: 8px 20px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  outline: none;
+}
+
+.btnPrimary {
+  background: #F668AC;
+  color: white;
+}
+
+.btnPrimary:hover {
+  background: #E91E63;
+  transform: translateY(-2px);
+}
+
+.btnSecondary {
+  background: transparent;
+  color: #F668AC;
+  border: 1px solid #F668AC;
+}
+
+.btnSecondary:hover {
+  background: #F668AC;
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* 响应式设计 */
+@media (max-width: 1300px) {
+  .activitySection {
+    padding: 60px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .activitySection {
+    padding: 40px 0;
+  }
+  
+  .sectionHeader {
+    margin-bottom: 40px;
+  }
+  
+  .sectionHeader h2 {
+    font-size: 28px;
+  }
+  
+  .sectionHeader h3 {
+    font-size: 20px;
+  }
+  
+  .activityImage {
+    height: 200px;
+  }
+  
+  .activityContent {
+    padding: 20px;
+  }
+  
+  .activityTitle {
+    font-size: 18px;
+  }
+  
+  .activityMeta {
+    gap: 12px;
+  }
+  
+  .activityActions {
+    flex-direction: column;
+  }
+  
+  .btnPrimary,
+  .btnSecondary {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .sectionHeader h2 {
+    font-size: 24px;
+  }
+  
+  .sectionHeader h3 {
+    font-size: 18px;
+  }
+  
+  .activityImage {
+    height: 180px;
+  }
+  
+  .activityContent {
+    padding: 16px;
+  }
+  
+  .activityTitle {
+    font-size: 16px;
+  }
+  
+  .activityDescription {
+    font-size: 13px;
+  }
+  
+  .activityMeta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .activityRow .ant-col {
+    padding: 0 8px !important;
+  }
+}
+
+/* 大屏幕时每行显示2个卡片，小屏幕时每行显示1个卡片 */
+@media (min-width: 992px) {
+  .activityCard {
+    margin-bottom: 0;
+    .ant-card .ant-card-body {
+      padding: 0 !important;
+    }
+  }
+}
+
+/* 确保卡片高度一致 */
+.activityCard .antCardBody {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.activityContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.activityDescription {
+  flex: 1;
+}
+
+.activityActions {
+  margin-top: auto;
+}

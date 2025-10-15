@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import profile_image from '@/assets/image/profile.jpg';
-import './Profile.css';
+import styles from './Profile.module.css';
 
 const Profile: React.FC = () => {
   const { t } = useTranslation();
@@ -12,20 +12,20 @@ const Profile: React.FC = () => {
   };
 
   return (
-    <div className="profile-section">
+    <div className={styles.profileSection}>
       <div 
-        className="profile-image-fullscreen"
+        className={styles.profileImageFullscreen}
         onClick={handleImageClick}
         style={{ 
           backgroundImage: `url(${profile_image})`,
           cursor: 'pointer'
         }}
       >
-        <div className="image-overlay">
-          <div className="image-content">
-            <h2 className="image-title">{t('profile.title')}</h2>
-            <p className="image-description">{t('profile.subtitle')}</p>
-            <div className="click-hint">
+        <div className={styles.imageOverlay}>
+          <div className={styles.imageContent}>
+            <h2 className={styles.imageTitle}>{t('profile.title')}</h2>
+            <p className={styles.imageDescription}>{t('profile.subtitle')}</p>
+            <div className={styles.clickHint}>
               <span>{t('profile.clickHint')}</span>
             </div>
           </div>
