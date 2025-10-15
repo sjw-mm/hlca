@@ -168,7 +168,13 @@
     }
   },
   "news": {
-    "title": "Actualités de l'Association"
+    "title": "Actualités de l'Association",
+    "items": {
+      "adaInterview": "La Présidente Ada interviewée par les médias locaux",
+      "filmWeekOpening": "La Semaine du Cinéma Chinois 2025 co-organisée par l'Association Meet & Mingle a ouvert grandement à Vancouver le 13 octobre, marquant le début d'un merveilleux festin de culture cinématographique",
+      "adaSignature": "La Présidente Ada de l'Association Meet & Mingle a signé le mur des invités, témoignant de l'ouverture grandiose du festival de cinéma",
+      "adaCoordination": "Pour assurer le bon déroulement du festival de cinéma, la Présidente Ada a personnellement coordonné tous les aspects avec une grande responsabilité, contrôlant soigneusement chaque détail pour garantir des opérations d'événement efficaces et ordonnées"
+    }
   },
   "contact": {
     "title": "Contactez-nous",

@@ -99,6 +99,10 @@
   color: #F668AC;
   transition: all 0.3s ease;
 }
+.play-icon {
+  width: 60px;
+  height: 60px;
+}
 
 .play-overlay:hover .play-icon {
   transform: scale(1.1);

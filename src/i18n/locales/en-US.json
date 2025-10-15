@@ -168,7 +168,13 @@
     }
   },
   "news": {
-    "title": "Association News"
+    "title": "Association News",
+    "items": {
+      "adaInterview": "President Ada interviewed by local media",
+      "filmWeekOpening": "The 2025 Chinese Film Week co-organized by Meet & Mingle Association opened grandly in Vancouver on October 13th, marking the beginning of a wonderful film culture feast",
+      "adaSignature": "Meet & Mingle Association President Ada signed the guest wall, witnessing the grand opening of the film festival",
+      "adaCoordination": "To ensure the smooth running of the film festival, President Ada personally coordinated all aspects with high responsibility, carefully controlling every detail to ensure efficient and orderly event operations"
+    }
   },
   "contact": {
     "title": "Contact Us",

@@ -1,7 +1,7 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { PlayCircleOutlined, PauseCircleOutlined, FullscreenOutlined, SoundOutlined, MutedOutlined } from '@ant-design/icons';
 import './index.css';
-
+import playIcon from '@/assets/image/play.svg';
 interface VideoPlayerProps {
   src: string;
   poster?: string;
@@ -249,7 +249,8 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
         {/* 播放按钮覆盖层 */}
         {!isPlaying && !isLoading && (
           <div className="play-overlay" onClick={togglePlay}>
-            <PlayCircleOutlined className="play-icon" />
+            {/* <PlayCircleOutlined className="play-icon" /> */}
+            <img src={playIcon} alt="play" className="play-icon" />
           </div>
         )}
 
