@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Row, Col, Form, Input, Button, Tabs, App } from 'antd';
 import { UserOutlined, PhoneOutlined, MailOutlined, TeamOutlined, CrownOutlined, GlobalOutlined } from '@ant-design/icons';
 import { useTranslation } from 'react-i18next';
-import './index.css';
+import styles from './index.module.css';
 
 const { TextArea } = Input;
 
@@ -29,7 +29,7 @@ const Join: React.FC = () => {
       form={form}
       layout="vertical"
       onFinish={onFinish}
-      className="join-form"
+      className={styles.joinForm}
     >
       <Form.Item
         name="name"
@@ -104,7 +104,7 @@ const Join: React.FC = () => {
           type="primary" 
           htmlType="submit" 
           size="large"
-          className="submit-button"
+          className={styles.submitButton}
           block
         >
           {t('join.volunteer.submit')}
@@ -119,7 +119,7 @@ const Join: React.FC = () => {
       form={form}
       layout="vertical"
       onFinish={onFinish}
-      className="join-form"
+      className={styles.joinForm}
     >
       <Form.Item
         name="name"
@@ -194,7 +194,7 @@ const Join: React.FC = () => {
           type="primary" 
           htmlType="submit" 
           size="large"
-          className="submit-button"
+          className={styles.submitButton}
           block
         >
           {t('join.member.submit')}
@@ -209,7 +209,7 @@ const Join: React.FC = () => {
       form={form}
       layout="vertical"
       onFinish={onFinish}
-      className="join-form"
+      className={styles.joinForm}
     >
       <Form.Item
         name="organizationName"
@@ -296,7 +296,7 @@ const Join: React.FC = () => {
           type="primary" 
           htmlType="submit" 
           size="large"
-          className="submit-button"
+          className={styles.submitButton}
           block
         >
           {t('join.partner.submit')}
@@ -339,18 +339,18 @@ const Join: React.FC = () => {
   ];
 
   return (      
-    <div className="join-page">
+    <div className={styles.joinPage}>
       {/* 主要内容区域 */}
-      <div className="main-content">
-        <div className="container">
+      <div className={styles.mainContent}>
+        <div className={styles.container}>
           <Row justify="center">
             <Col xs={24} sm={24} md={20} lg={18} xl={16}>
-              <div className="join-form-container">
+              <div className={styles.joinFormContainer}>
                 <Tabs
                   activeKey={activeTab}
                   onChange={setActiveTab}
                   items={tabItems}
-                  className="join-tabs"
+                  className={styles.joinTabs}
                   centered
                 />
               </div>

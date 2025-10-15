@@ -1,0 +1,274 @@
+/* 联系我们页面样式 - 简洁设计 */
+.contactPage {
+  background: #fff;
+  min-height: 100vh;
+}
+
+/* 联系信息区域 */
+.contactInfoSection {
+  padding: 80px 0 60px;
+  background: #ffffff;
+}
+
+.contactInfoContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  justify-content: center;
+  gap: 120px;
+  align-items: flex-start;
+}
+
+.contactBlock {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+  max-width: 460px;
+}
+
+.contactIcon {
+  width: 90px;
+  height: 90px;
+  background: #EB3276;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 40px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.contactContent {
+  flex: 1;
+}
+
+.contactTitle {
+  color: #000;
+  font-family: Inter;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 36px;
+}
+
+.contactText {
+  color: #000;
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 22px;
+}
+
+/* 品牌信息区域 */
+.brandSection {
+  padding: 60px 20px;
+  background: #ffffff;
+}
+
+.brandContainer {
+  max-width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+}
+
+.qrCodeContainer {
+  flex-shrink: 0;
+  border: 2px solid #E9E9E9;
+  border-radius: 8px;
+  padding: 6px;
+}
+
+.qrCode {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.divider {
+  width: 2px;
+  height: 200px;
+  background: #E9E9E9;
+}
+
+.brandInfo {
+  text-align: left;
+}
+
+.brandName {
+  margin-bottom: 16px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.logoImage {
+  object-fit: contain;
+  width: 345px;
+  height: 67px;
+}
+
+.associationName {
+  color: #000;
+  font-family: Inter;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin-left: 12px;
+  margin-top: 50px;
+}
+
+.location {
+  color: #848484;
+  font-family: Inter;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin-left: 12px;
+  margin-top: 22px;
+}
+
+/* 移动端响应式设计 */
+@media (max-width: 768px) {
+  .contactInfoSection {
+    padding: 60px 0 40px;
+  }
+  
+  .contactInfoContainer {
+    flex-direction: column;
+    gap: 40px;
+    padding: 0 20px;
+    align-items: center;
+  }
+  
+  .contactBlock {
+    max-width: 100%;
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .contactIcon {
+    width: 20px;
+    height: 20px;
+    font-size: 40px;
+  }
+  
+  .contactTitle {
+    font-size: 16px;
+  }
+  
+  .contactText {
+    font-size: 14px;
+  }
+  
+  .brandSection {
+    padding: 40px 0 60px;
+  }
+  
+  .brandContainer {
+    flex-direction: column;
+    gap: 40px;
+    padding: 0 20px;
+    text-align: center;
+    max-width: 100%;
+  }
+  
+  .qrCode {
+    width: 160px;
+    height: 160px;
+  }
+  
+  .brandInfo {
+    text-align: center;
+  }
+  
+  .brandName {
+    justify-content: center;
+  }
+  
+  .logoImage {
+    max-width: 240px;
+    max-height: 50px;
+  }
+  
+  .associationName {
+    font-size: 16px;
+  }
+  
+  .location {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contactInfoSection {
+    padding: 40px 0 30px;
+  }
+  
+  .contactInfoContainer {
+    gap: 30px;
+    padding: 0 20px;
+  }
+  
+  .contactBlock {
+    gap: 30px;
+  }
+  
+  .contactIcon {
+    width: 60px;
+    height: 60px;
+    font-size: 30px;
+  }
+  
+  .contactTitle {
+    font-size: 15px;
+  }
+  
+  .contactText {
+    font-size: 13px;
+  }
+  
+  .brandSection {
+    padding: 30px 0 40px;
+  }
+  
+  .brandContainer {
+    gap: 30px;
+    padding: 0 16px;
+    max-width: 100%;
+  }
+  
+  .qrCode {
+    width: 140px;
+    height: 140px;
+  }
+  
+  .logoImage {
+    max-width: 200px;
+    max-height: 40px;
+  }
+
+  .divider {
+    width: 200px;
+    height: 2px;
+    background: #E9E9E9;
+  }
+  
+  .associationName {
+    font-size: 15px;
+  }
+  
+  .location {
+    font-size: 13px;
+  }
+}

@@ -8,7 +8,7 @@ import NewsSection from './components/NewsSection';
 import ActivitySection, { type ActivityProps } from './components/ActivitySection';
 import activity_1 from '@/assets/image/activity-1.jpeg';
 import activity_2 from '@/assets/image/activity-2.jpeg';
-import './index.css';
+import styles from './index.module.css';
 
 const Home: React.FC = () => {
   const { t } = useTranslation();
@@ -33,7 +33,7 @@ const Home: React.FC = () => {
     },
   ];
   return (
-    <div className="home-page">
+    <div className={styles.homePage}>
 
       {/* 协会简介区域 */}
       <Profile />
@@ -44,12 +44,8 @@ const Home: React.FC = () => {
       {/* 活动 */}
       <ActivitySection activityList={activityList} />
 
-      {/* 荣誉墙 */}
-      {/* <HonorWall /> */}
-
       {/* 协会新闻 */}
       <NewsSection />
-      {/* <BlogSection /> */}
       
     </div>
   );

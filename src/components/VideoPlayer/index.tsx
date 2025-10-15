@@ -1,7 +1,7 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { PlayCircleOutlined, PauseCircleOutlined, FullscreenOutlined, SoundOutlined, MutedOutlined } from '@ant-design/icons';
-import './index.css';
-import playIcon from '@/assets/image/play.svg';
+import styles from './index.module.css';
+// import playIcon from '@/assets/image/play.svg';
 interface VideoPlayerProps {
   src: string;
   poster?: string;
@@ -221,17 +221,17 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
   return (
     <div 
       ref={containerRef}
-      className={`video-player ${className} ${isFullscreen ? 'fullscreen' : ''}`}
+      className={`${styles.videoPlayer} ${className} ${isFullscreen ? 'fullscreen' : ''}`}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
       onTouchStart={handleTouchStart}
     >
-      <div className="video-container">
+      <div className={styles.videoContainer}>
         <video
           ref={videoRef}
           src={src}
           poster={poster}
-          className="video-element"
+          className={styles.videoElement}
           autoPlay={autoPlay}
           muted={muted}
           loop={loop}
@@ -241,66 +241,66 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
         
         {/* 加载指示器 */}
         {isLoading && (
-          <div className="loading-overlay">
-            <div className="loading-spinner"></div>
+          <div className={styles.loadingOverlay}>
+            <div className={styles.loadingSpinner}></div>
           </div>
         )}
 
         {/* 播放按钮覆盖层 */}
         {!isPlaying && !isLoading && (
-          <div className="play-overlay" onClick={togglePlay}>
-            {/* <PlayCircleOutlined className="play-icon" /> */}
-            <img src={playIcon} alt="play" className="play-icon" />
+          <div className={styles.playOverlay} onClick={togglePlay}>
+            <PlayCircleOutlined className={styles.playIcon} />
+            {/* <img src={playIcon} alt="play" className={styles.playIcon} /> */}
           </div>
         )}
 
         {/* 控制栏 */}
         {controls && showControls && (
-          <div className="controls-overlay">
-            <div className="controls-bar">
+          <div className={styles.controlsOverlay}>
+            <div className={styles.controlsBar}>
               {/* 进度条 */}
               <div 
                 ref={progressRef}
-                className="progress-container"
+                className={styles.progressContainer}
                 onClick={handleProgressClick}
               >
-                <div className="progress-track">
+                <div className={styles.progressTrack}>
                   <div 
-                    className="progress-fill"
+                    className={styles.progressFill}
                     style={{ width: `${progressPercent}%` }}
                   />
                   <div 
-                    className="progress-thumb"
+                    className={styles.progressThumb}
                     style={{ left: `${progressPercent}%` }}
                   />
                 </div>
               </div>
 
               {/* 控制按钮 */}
-              <div className="controls-buttons">
-                <div className="left-controls">
+              <div className={styles.controlsButtons}>
+                <div className={styles.leftControls}>
                   <button 
-                    className="control-btn play-btn"
+                    className={`${styles.controlBtn} ${styles.playBtn}`}
                     onClick={togglePlay}
                   >
                     {isPlaying ? <PauseCircleOutlined /> : <PlayCircleOutlined />}
                   </button>
                   
                   <button 
-                    className="control-btn volume-btn"
+                    className={`${styles.controlBtn} ${styles.volumeBtn}`}
                     onClick={toggleMute}
                   >
                     {isMuted ? <MutedOutlined /> : <SoundOutlined />}
                   </button>
                   
-                  <span className="time-display">
+                  <span className={styles.timeDisplay}>
                     {formatTime(currentTime)} / {formatTime(duration)}
                   </span>
                 </div>
 
-                <div className="right-controls">
+                <div className={styles.rightControls}>
                   <button 
-                    className="control-btn fullscreen-btn"
+                    className={`${styles.controlBtn} ${styles.fullscreenBtn}`}
                     onClick={toggleFullscreen}
                   >
                     <FullscreenOutlined />
