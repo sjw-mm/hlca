@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
-import { EyeOutlined } from '@ant-design/icons';
+import { EyeOutlined, LeftOutlined, RightOutlined } from '@ant-design/icons';
 import VideoPlayer from '@/components/VideoPlayer';
 // import playIcon from '@/assets/image/play.svg';
 import news_01 from '@/assets/image/news-1.jpg';
@@ -35,6 +35,19 @@ import news_26 from '@/assets/image/news/news-26.jpg';
 import news_27 from '@/assets/image/news/news-27.jpg';
 import news_28 from '@/assets/image/news/news-28.jpg';
 import news_29 from '@/assets/image/news/news-29.jpg';
+import news_30 from '@/assets/image/news/news-30.jpg';
+import news_31 from '@/assets/image/news/news-31.jpg';
+import news_32 from '@/assets/image/news/news-32.jpg';
+import news_33 from '@/assets/image/news/news-33.jpg';
+import news_34 from '@/assets/image/news/news-34.jpg';
+import news_35 from '@/assets/image/news/news-35.jpg';
+import news_36 from '@/assets/image/news/news-36.jpg';
+import news_37 from '@/assets/image/news/news-37.jpg';
+import news_38 from '@/assets/image/news/news-38.jpg';
+import news_39 from '@/assets/image/news/news-39.jpg';
+import news_40 from '@/assets/image/news/news-40.jpg';
+// import news_41 from '@/assets/image/news/news-41.jpg';
+import news_42 from '@/assets/image/news/news-42.jpg';
 
 import styles from './NewsSection.module.css';
 
@@ -56,8 +69,97 @@ const NewsSection: React.FC = () => {
   const [previewImage, setPreviewImage] = useState<string | null>(null);
   const [playingVideo, setPlayingVideo] = useState<number | null>(null);
   
+  // Pagination state
+  const [currentPage, setCurrentPage] = useState(1);
+  const [isMobile, setIsMobile] = useState(false);
+  const [displayedItems, setDisplayedItems] = useState<NewsItem[]>([]);
+  const [isLoading, setIsLoading] = useState(false);
+  
+  // Pagination configuration
+  const ITEMS_PER_PAGE = 6; // 3x3 grid for PC
+  const MOBILE_ITEMS_PER_LOAD = 6; // Load 6 items at a time on mobile
+  
   // News data with different display types
-  const newsItems: NewsItem[] = [
+  const newsItems: NewsItem[] = useMemo(() => [
+    { 
+      id: 42, 
+      type: 'image', 
+      src: news_42, 
+      alt: 'News 42'
+    },
+    // { 
+    //   id: 41, 
+    //   type: 'image', 
+    //   src: news_41, 
+    //   alt: 'News 41'
+    // },
+    { 
+      id: 40, 
+      type: 'image', 
+      src: news_40, 
+      alt: 'News 40'
+    },
+    { 
+      id: 39, 
+      type: 'image', 
+      src: news_39, 
+      alt: 'News 39'
+    },
+    { 
+      id: 38, 
+      type: 'image', 
+      src: news_38, 
+      alt: 'News 38'
+    },
+    { 
+      id: 37, 
+      type: 'image', 
+      src: news_37, 
+      alt: 'News 37'
+    },
+    { 
+      id: 36, 
+      type: 'image', 
+      src: news_36, 
+      alt: 'News 36'
+    },
+    { 
+      id: 35, 
+      type: 'image-text', 
+      src: news_35, 
+      alt: 'News 35',
+      description: t('news.items.visit'),
+    },
+    { 
+      id: 34, 
+      type: 'image', 
+      src: news_34, 
+      alt: 'News 34'
+    },
+    { 
+      id: 33, 
+      type: 'image', 
+      src: news_33, 
+      alt: 'News 33'
+    },
+    { 
+      id: 32, 
+      type: 'image', 
+      src: news_32, 
+      alt: 'News 32'
+    },
+    { 
+      id: 31, 
+      type: 'image', 
+      src: news_31, 
+      alt: 'News 31'
+    },
+    { 
+      id: 30, 
+      type: 'image', 
+      src: news_30, 
+      alt: 'News 30'
+    },
     { 
       id: 26, 
       type: 'video', 
@@ -257,7 +359,71 @@ const NewsSection: React.FC = () => {
       src: news_07, 
       alt: 'News 7'
     },
-  ];
+  ], [t]);
+
+  // Check if device is mobile
+  useEffect(() => {
+    const checkIsMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    
+    checkIsMobile();
+    window.addEventListener('resize', checkIsMobile);
+    return () => window.removeEventListener('resize', checkIsMobile);
+  }, []);
+
+  // Initialize displayed items
+  useEffect(() => {
+    if (isMobile) {
+      // Mobile: show first batch of items
+      setDisplayedItems(newsItems.slice(0, MOBILE_ITEMS_PER_LOAD));
+    } else {
+      // PC: show items for current page
+      const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+      const endIndex = startIndex + ITEMS_PER_PAGE;
+      setDisplayedItems(newsItems.slice(startIndex, endIndex));
+    }
+  }, [currentPage, isMobile, newsItems]);
+
+  // Mobile infinite scroll
+  const loadMoreItems = useCallback(() => {
+    if (isLoading || !isMobile) return;
+    
+    setIsLoading(true);
+    setTimeout(() => {
+      const currentCount = displayedItems.length;
+      const nextBatch = newsItems.slice(currentCount, currentCount + MOBILE_ITEMS_PER_LOAD);
+      setDisplayedItems(prev => [...prev, ...nextBatch]);
+      setIsLoading(false);
+    }, 500); // Simulate loading delay
+  }, [displayedItems.length, isMobile, isLoading, newsItems]);
+
+  // Scroll event handler for mobile infinite scroll
+  useEffect(() => {
+    if (!isMobile) return;
+
+    const handleScroll = () => {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      const windowHeight = window.innerHeight;
+      const documentHeight = document.documentElement.scrollHeight;
+      
+      // Load more when user is near bottom (100px from bottom)
+      if (scrollTop + windowHeight >= documentHeight - 100) {
+        loadMoreItems();
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [isMobile, loadMoreItems]);
+
+  // PC pagination handlers
+  const handlePageChange = (page: number) => {
+    setCurrentPage(page);
+    // window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const totalPages = Math.ceil(newsItems.length / ITEMS_PER_PAGE);
 
   const handleImageClick = (src: string) => {
     setPreviewImage(src);
@@ -363,12 +529,78 @@ const NewsSection: React.FC = () => {
       <div className={styles.container}>
         <h2 className={styles.sectionTitle}>{t('news.title')}</h2>
         <div className={styles.newsGrid}>
-          {newsItems.map((item) => (
+          {displayedItems.map((item) => (
             <div key={item.id} className={styles.newsItem}>
               {renderNewsCard(item)}
             </div>
           ))}
         </div>
+
+        {/* PC Pagination Controls */}
+        {!isMobile && totalPages > 1 && (
+          <div className={styles.paginationContainer}>
+            <div className={styles.pagination}>
+              <button
+                className={`${styles.paginationBtn} ${currentPage === 1 ? styles.disabled : ''}`}
+                onClick={() => handlePageChange(currentPage - 1)}
+                disabled={currentPage === 1}
+              >
+                <LeftOutlined />
+              </button>
+              
+              <div className={styles.pageNumbers}>
+                {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+                  <button
+                    key={page}
+                    className={`${styles.pageBtn} ${currentPage === page ? styles.active : ''}`}
+                    onClick={() => handlePageChange(page)}
+                  >
+                    {page}
+                  </button>
+                ))}
+              </div>
+              
+              <button
+                className={`${styles.paginationBtn} ${currentPage === totalPages ? styles.disabled : ''}`}
+                onClick={() => handlePageChange(currentPage + 1)}
+                disabled={currentPage === totalPages}
+              >
+                <RightOutlined />
+              </button>
+            </div>
+            
+            <div className={styles.paginationInfo}>
+              {t('pagination.showing')} {((currentPage - 1) * ITEMS_PER_PAGE) + 1} - {Math.min(currentPage * ITEMS_PER_PAGE, newsItems.length)} {t('pagination.of')} {newsItems.length} {t('pagination.items')}
+            </div>
+          </div>
+        )}
+
+        {/* Mobile Loading Indicator */}
+        {isMobile && (
+          <div className={styles.mobilePagination}>
+            {isLoading && (
+              <div className={styles.loadingIndicator}>
+                <div className={styles.spinner}></div>
+                <span>{t('pagination.loading')}</span>
+              </div>
+            )}
+            
+            {!isLoading && displayedItems.length < newsItems.length && (
+              <button 
+                className={styles.loadMoreBtn}
+                onClick={loadMoreItems}
+              >
+                {t('pagination.loadMore')}
+              </button>
+            )}
+            
+            {displayedItems.length >= newsItems.length && (
+              <div className={styles.endMessage}>
+                {t('pagination.allLoaded')}
+              </div>
+            )}
+          </div>
+        )}
       </div>
 
       {/* Image Preview Modal */}

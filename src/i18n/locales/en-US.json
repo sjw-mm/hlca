@@ -173,7 +173,8 @@
       "adaInterview": "President Ada interviewed by local media",
       "filmWeekOpening": "The 2025 Chinese Film Week co-organized by Meet & Mingle Association opened grandly in Vancouver on October 13th, marking the beginning of a wonderful film culture feast",
       "adaSignature": "Meet & Mingle Association President Ada signed the guest wall, witnessing the grand opening of the film festival",
-      "adaCoordination": "To ensure the smooth running of the film festival, President Ada personally coordinated all aspects with high responsibility, carefully controlling every detail to ensure efficient and orderly event operations"
+      "adaCoordination": "To ensure the smooth running of the film festival, President Ada personally coordinated all aspects with high responsibility, carefully controlling every detail to ensure efficient and orderly event operations",
+      "visit": "On October 16, 2025, the President and Honorary President of the \"Happy Life Exchange Association\" accompanied Mr. Fan Deng to visit the Vancouver Chinese Cultural Centre, a historic institution with 120 years of history, and held a pleasant discussion. The President proposed that the Association will assist the Fan Deng Reading Club in Vancouver in expanding its influence, enabling more people to enjoy the power of knowledge. Both parties also successfully reached a preliminary cooperation agreement!"
     }
   },
   "contact": {
@@ -296,5 +297,13 @@
   "common": {
     "menu": "Menu",
     "language": "Language"
+  },
+  "pagination": {
+    "showing": "Showing",
+    "of": "of",
+    "items": "items",
+    "loading": "Loading...",
+    "loadMore": "Load More",
+    "allLoaded": "All content loaded"
   }
 }

@@ -173,7 +173,8 @@
       "adaInterview": "La Présidente Ada interviewée par les médias locaux",
       "filmWeekOpening": "La Semaine du Cinéma Chinois 2025 co-organisée par l'Association Meet & Mingle a ouvert grandement à Vancouver le 13 octobre, marquant le début d'un merveilleux festin de culture cinématographique",
       "adaSignature": "La Présidente Ada de l'Association Meet & Mingle a signé le mur des invités, témoignant de l'ouverture grandiose du festival de cinéma",
-      "adaCoordination": "Pour assurer le bon déroulement du festival de cinéma, la Présidente Ada a personnellement coordonné tous les aspects avec une grande responsabilité, contrôlant soigneusement chaque détail pour garantir des opérations d'événement efficaces et ordonnées"
+      "adaCoordination": "Pour assurer le bon déroulement du festival de cinéma, la Présidente Ada a personnellement coordonné tous les aspects avec une grande responsabilité, contrôlant soigneusement chaque détail pour garantir des opérations d'événement efficaces et ordonnées",
+      "visit": "Le 16 octobre 2025, le président et le président d'honneur de l'Association d'Échanges pour la Vie Épanouie ont accompagné M. Fan Deng lors d'une visite à la Société chinoise de Vancouver, une institution historique de 120 ans. Une discussion agréable a eu lieu, au cours de laquelle le président a proposé que l'Association apporterait son soutien bénévole à l'expansion de l'association de lecture de Fan Deng à Vancouver, permettant ainsi à un plus grand nombre de personnes de bénéficier de la puissance de la connaissance. Les deux parties ont également convenu d'une intention de coopération initiale !"
     }
   },
   "contact": {
@@ -296,5 +297,13 @@
   "common": {
     "menu": "Menu",
     "language": "Langue"
+  },
+  "pagination": {
+    "showing": "Affichage",
+    "of": "sur",
+    "items": "éléments",
+    "loading": "Chargement...",
+    "loadMore": "Charger plus",
+    "allLoaded": "Tout le contenu chargé"
   }
 }
