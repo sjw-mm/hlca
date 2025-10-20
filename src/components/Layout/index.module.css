@@ -68,7 +68,8 @@
 }
 
 .logo img {
-  height: 30px;
+  width: 150px;
+  height: 56px;
 }
 
 .logoText {
@@ -166,10 +167,6 @@
     margin-bottom: 4px;
   }
   
-  .headerContent {
-    height: 60px;
-  }
-  
   .desktopMenu {
     display: none;
   }
@@ -204,9 +201,9 @@
     font-size: 12px;
   }
   
-  .logo img {
+  /* .logo img {
     height: 20px;
-  }
+  } */
   
   .logoText {
     font-size: 10px;

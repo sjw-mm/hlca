@@ -28,9 +28,9 @@ const TeamSection: React.FC = () => {
           <h2>{t('team.title')}</h2>
         </div>
         
-        <Row gutter={[32, 32]} justify="center" className={styles.teamSectionRow}>
+        <Row gutter={[16, 32]} justify="center" className={styles.teamSectionRow}>
           {teamMembers.map((member, index) => (
-            <Col xs={24} sm={12} lg={8} key={index}>
+            <Col xs={24} sm={12} md={12} lg={8} key={index}>
               <Card 
                 className={styles.teamCard}
                 hoverable

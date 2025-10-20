@@ -2,17 +2,26 @@
 .teamSection {
   padding: 10px 0;
   background: #ffffff;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .teamSection .container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .sectionHeader {
   text-align: center;
   margin-bottom: 60px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .sectionHeader h2 {
@@ -36,8 +45,9 @@
   box-shadow: 0 4px 16px rgba(246, 104, 172, 0.1);
   transition: all 0.3s ease;
   overflow: hidden;
-  max-width: 350px;
+  max-width: 100%;
   margin: 0 auto;
+  box-sizing: border-box;
 }
 
 .teamCard .antCardCover {
@@ -162,6 +172,10 @@
     padding: 60px 0;
   }
   
+  .teamSection .container {
+    padding: 0 16px;
+  }
+  
   .sectionHeader {
     margin-bottom: 40px;
   }
@@ -189,9 +203,21 @@
   .memberPosition {
     font-size: 13px;
   }
+  
+  .teamSectionRow {
+    margin: 0;
+  }
 }
 
 @media (max-width: 480px) {
+  .teamSection {
+    padding: 60px 0;
+  }
+  
+  .teamSection .container {
+    padding: 0 12px;
+  }
+  
   .sectionHeader h2 {
     font-size: 24px;
   }
@@ -221,7 +247,12 @@
     height: 36px;
     font-size: 16px;
   }
+  
+  .teamSectionRow {
+    margin: 0;
+  }
+  
   .teamSectionRow .ant-col {
-    padding: 0 8px !important;
+    padding: 0 !important;
   }
 }

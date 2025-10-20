@@ -9,7 +9,7 @@ import {
 import LanguageSwitcher from '../LanguageSwitcher';
 import MobileBottomNav from '../MobileBottomNav';
 import styles from './index.module.css';
-import logo from '@/assets/image/logo.svg';
+import logo from '@/assets/logo.png';
 
 const { Header, Content, Footer } = Layout;
 
@@ -72,7 +72,7 @@ const LayoutComponent: React.FC<LayoutProps> = ({ children }) => {
               {/* <Link to="/"> */}
                 <img src={logo} alt="logo" />
               {/* </Link> */}
-              <div className={styles.logoText}>{t('siteName')}</div>
+              {/* <div className={styles.logoText}>{t('siteName')}</div> */}
             </div>
             <div className={styles.desktopMenu}>
               <Menu

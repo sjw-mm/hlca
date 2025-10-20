@@ -1,0 +1,8 @@
+{
+  "recommendations": [
+    "lokalise.i18n-ally",
+    "ms-vscode.vscode-typescript-next",
+    "bradlc.vscode-tailwindcss",
+    "esbenp.prettier-vscode"
+  ]
+}
